@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MainTest">
+    <test name="MainTest" parallel="false">
+        <classes>
+            <class name="org.example.MoveAroundTheTopNavigationTest">
+                <methods>
+                    <include name="moveToSection"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

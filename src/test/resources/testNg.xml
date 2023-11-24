@@ -2,9 +2,10 @@
 <suite name="MainTest">
     <test name="MainTest" parallel="false">
         <classes>
-            <class name="org.example.MoveAroundTheTopNavigationTest">
+            <class name="org.example.MainTest">
                 <methods>
-                    <include name="moveToSection"/>
+                    <include name="moveAroundCatalog"/>
+                    <include name="chooseMobile"/>
                 </methods>
             </class>
         </classes>

@@ -44,4 +44,24 @@ public class MainTest extends BaseTest {
         int actual = shoppingSteps.getNumberFromSchemaFilterButton();
         Assert.assertEquals(actual, mobileData.getNumberOfPhones());
     }
+
+    @Test(description = "Choose the cheapest mobile phone",
+            dataProvider = "mobileData", dataProviderClass = JsonReader.class)
+    public void chooseTheCheapestMobile(MobileData mobileData) {
+        navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
+        navigationSteps.clickClassifierItem(mobileData.getClassifierItemName());
+        navigationSteps.clickAsideListItem(mobileData.getClassifierItemName(),
+                mobileData.getAsideItemName());
+        navigationSteps.clickDropDownItem(mobileData.getClassifierItemName(), mobileData.getAsideItemName(),
+                mobileData.getDropDownItemName());
+        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelManufacturer(), mobileData.getManufacturerName());
+        shoppingSteps.enterMinValueOfLimit(mobileData.getLabelPrice(), mobileData.getMinPrice());
+        shoppingSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
+        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelShop(), mobileData.getShopName());
+        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelDate(), mobileData.getReleaseDate());
+        shoppingSteps.clickTheCheapestProduct();
+
+        double actual = shoppingSteps.getOffersDescriptionPrice();
+        Assert.assertEquals(actual, mobileData.getPriceOfTheCheapestMobile());
+    }
 }

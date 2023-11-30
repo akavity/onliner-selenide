@@ -9,40 +9,36 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class ShoppingPage {
     ElementsCollection products = $$(By.xpath(" //div[@id='schema-products']"));
-
-    public SelenideElement schemaHeaderText = $(By.xpath("//div[@class='schema-header']/h1"));
-
+    private final ElementsCollection pricesOfProductsFields = $$(By.xpath("//span[contains(@data-bind,'.minPrice')]"));
+    public SelenideElement schemaHeaderField = $(By.xpath("//div[@class='schema-header']/h1"));
     public SelenideElement controlElement = $(By.xpath("//div[contains(@class, 'schema-filter-button__inner-container')]"));
-
     public SelenideElement controlButton = $(By.xpath("//span[contains(@class, 'button__sub_control')]"));
+    private final SelenideElement schemaFilterButton = $(By.xpath("//span[contains(@class, 'n__sub_m')]"));
+    private final SelenideElement offersDescriptionPriceField = $(By.xpath("//div[contains(@class, 'price-group')]/div"));
 
-    public SelenideElement schemaFilterCheckboxItem(String label, String checkBoxItemName) {
+    public SelenideElement getSchemaFilterCheckboxItem(String label, String checkBoxItemName) {
         return $(By.xpath("//span[contains(text(), '" + label + "')]" +
                 "//..//../div[contains(@class, 'facet')]//li//span[contains(text(), '" + checkBoxItemName + "')]/.."));
     }
 
-    public SelenideElement schemaFilterDropDown(String label) {
+    public SelenideElement getSchemaFilterDropDown(String label) {
         return $(By.xpath("//span[contains(text(), '" + label + "')]" +
                 "//..//../div[contains(@class, 'facet')]/div[contains(@class,'control')]"));
     }
 
-    public SelenideElement popoverVisibleItem(String label, String itemName) {
+    public SelenideElement getPopoverVisibleItem(String label, String itemName) {
         return $(By.xpath("//span[contains(text(), '" + label + "')]" +
                 "/../following-sibling::div//span[contains(text(), '" + itemName + "')]"));
     }
 
-    public SelenideElement minValueField(String label) {
+    public SelenideElement getMinValueField(String label) {
         return $(By.xpath("//span[contains(text(), '" + label + "')]" +
                 "/..//../div[contains(@class, 'facet')]//div[contains(@class, 'control_input')][1]"));
     }
 
-    public SelenideElement maxValueField(String label) {
+    public SelenideElement getMaxValueField(String label) {
         return $(By.xpath("//span[contains(text(), '" + label + "')]" +
                 "/..//../div[contains(@class, 'facet')]//div[contains(@class, 'control_input')][2]"));
-    }
-
-    public SelenideElement schemaFilterButton() {
-        return $(By.xpath("//span[contains(@class, 'n__sub_m')]"));
     }
 
     //span[contains(@data-bind,'.full_name')]     название продуктов;
@@ -51,7 +47,19 @@ public class ShoppingPage {
     //div[@class="schema-product__offers"] количество предложений
     //div[contains(@class, "schema-product")]
 
+    public SelenideElement getSchemaFilterButton() {
+        return schemaFilterButton;
+    }
+
     public SelenideElement getSchemaHeadText() {
-        return schemaHeaderText;
+        return schemaHeaderField;
+    }
+
+    public ElementsCollection getPricesOfProductsFields() {
+        return pricesOfProductsFields;
+    }
+
+    public SelenideElement getOffersDescriptionPriceField() {
+        return offersDescriptionPriceField;
     }
 }

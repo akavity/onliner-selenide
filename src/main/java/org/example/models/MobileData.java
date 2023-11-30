@@ -22,4 +22,5 @@ public class MobileData {
     String labelDate;
     String releaseDate;
     int numberOfPhones;
+    double priceOfTheCheapestMobile;
 }

@@ -13,7 +13,8 @@
     "shopName": "Мобилайн",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "numberOfPhones": 4
+    "numberOfPhones": 5,
+    "priceOfTheCheapestMobile" : 388.64
   },
   {
     "topMenuItemName": "Каталог",
@@ -29,7 +30,8 @@
     "shopName": "ONLINE",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
-    "numberOfPhones": 5
+    "numberOfPhones": 5,
+    "priceOfTheCheapestMobile" : 1300.00
   },
   {
     "topMenuItemName": "Каталог",
@@ -40,12 +42,13 @@
     "manufacturerName": "Apple",
     "labelPrice": "Цена",
     "minPrice": "3000",
-    "maxPrice": "5000",
+    "maxPrice": "3500",
     "labelShop": "Магазин",
     "shopName": "Agroup",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "numberOfPhones": 47
+    "numberOfPhones": 10,
+    "priceOfTheCheapestMobile" : 3010.00
   },
   {
     "topMenuItemName": "Каталог",
@@ -60,8 +63,9 @@
     "labelShop": "Магазин",
     "shopName": "ONLINE",
     "labelDate": "Дата выхода на рынок",
-    "releaseDate": "2022",
-    "numberOfPhones": 28
+    "releaseDate": "2021",
+    "numberOfPhones": 6,
+    "priceOfTheCheapestMobile" : 495.00
   },
   {
     "topMenuItemName": "Каталог",
@@ -77,7 +81,8 @@
     "shopName": "ONLINE",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2023",
-    "numberOfPhones": 6
+    "numberOfPhones": 6,
+    "priceOfTheCheapestMobile" : 800
   },
   {
     "topMenuItemName": "Каталог",
@@ -93,7 +98,8 @@
     "shopName": "Agroup",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "numberOfPhones": 4
+    "numberOfPhones": 3,
+    "priceOfTheCheapestMobile" : 399.00
   },
   {
     "topMenuItemName": "Каталог",
@@ -109,7 +115,8 @@
     "shopName": "ТТН",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
-    "numberOfPhones": 6
+    "numberOfPhones": 6,
+    "priceOfTheCheapestMobile" : 550.00
   },
   {
     "topMenuItemName": "Каталог",
@@ -120,11 +127,12 @@
     "manufacturerName": "Realme",
     "labelPrice": "Цена",
     "minPrice": "500",
-    "maxPrice": "1000",
+    "maxPrice": "800",
     "labelShop": "Магазин",
     "shopName": "Media",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
-    "numberOfPhones": 4
+    "numberOfPhones": 3,
+    "priceOfTheCheapestMobile" : 660.00
   }
 ]

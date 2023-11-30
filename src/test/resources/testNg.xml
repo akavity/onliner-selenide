@@ -6,6 +6,7 @@
                 <methods>
                     <include name="moveAroundCatalog"/>
                     <include name="chooseMobile"/>
+                    <include name="chooseTheCheapestMobile"/>
                 </methods>
             </class>
         </classes>

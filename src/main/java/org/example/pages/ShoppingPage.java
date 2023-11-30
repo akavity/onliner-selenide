@@ -41,12 +41,6 @@ public class ShoppingPage {
                 "/..//../div[contains(@class, 'facet')]//div[contains(@class, 'control_input')][2]"));
     }
 
-    //span[contains(@data-bind,'.full_name')]     название продуктов;
-    //span[contains(@data-bind,'.minPrice')]      цена продуктов
-    //div[@class="schema-product__status"]  нет в наличии
-    //div[@class="schema-product__offers"] количество предложений
-    //div[contains(@class, "schema-product")]
-
     public SelenideElement getSchemaFilterButton() {
         return schemaFilterButton;
     }

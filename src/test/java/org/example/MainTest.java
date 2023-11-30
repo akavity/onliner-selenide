@@ -26,7 +26,7 @@ public class MainTest extends BaseTest {
         Assert.assertEquals(actual, topNavigationData.getSchemaHeaderText());
     }
 
-    @Test(description = "Sorting phones by price, manufacturer, shop",
+    @Test(description = "Sorting phones by price, manufacturer, shop, release date",
             dataProvider = "mobileData", dataProviderClass = JsonReader.class)
     public void chooseMobile(MobileData mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());

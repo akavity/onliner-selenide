@@ -59,13 +59,13 @@ public class ShoppingSteps {
 
     @Step
     public void clickSchemaFilterDropDown(String label) {
-        log.info("");
+        log.info("Click schema filter drop down");
         shoppingPage.getSchemaFilterDropDown(label).click();
     }
 
     @Step
     public void clickPopoverVisibleItem(String label, String itemName) {
-        log.info("");
+        log.info("Click popover visible item");
         shoppingPage.getPopoverVisibleItem(label, itemName).click();
     }
 
@@ -110,7 +110,7 @@ public class ShoppingSteps {
             }
         }
 
-        log.info("theCheapestElement :" + theCheapestElement);
+        log.info("The cheapest product has price :" + lowPrice);
         return theCheapestElement;
     }
 

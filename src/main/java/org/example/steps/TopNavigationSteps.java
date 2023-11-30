@@ -11,27 +11,27 @@ public class TopNavigationSteps {
     @Step("Click top menu item")
     public void clickTopMenuItem(String topMenuItemName) {
         log.info("Click top menu item: " + topMenuItemName);
-        topNavigation.topMenuItem(topMenuItemName).click();
+        topNavigation.getTopMenuItem(topMenuItemName).click();
     }
 
     @Step("Click classifier item")
     public void clickClassifierItem(String classifierItemName) {
         log.info("Click classifier item: " + classifierItemName);
-        topNavigation.classifierItem(classifierItemName).click();
+        topNavigation.getClassifierItem(classifierItemName).click();
     }
 
     @Step("Click aside list item")
     public void clickAsideListItem(String classifierItemName, String asideItemName) {
         String dataId = getDataId(classifierItemName);
         log.info("Click aside list item: " + asideItemName);
-        topNavigation.asideListItem(dataId, asideItemName).click();
+        topNavigation.getAsideListItem(dataId, asideItemName).click();
     }
 
     @Step("Click drop down item")
     public void clickDropDownItem(String classifierItemName, String asideItemName, String dropDownItemName) {
         String dataId = getDataId(classifierItemName);
         log.info("Click drop down item: " + dropDownItemName);
-        topNavigation.dropDownItem(dataId, asideItemName, dropDownItemName).click();
+        topNavigation.getDropDownItem(dataId, asideItemName, dropDownItemName).click();
     }
 
     public String getDataId(String classifierItemName) {

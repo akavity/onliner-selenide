@@ -2,15 +2,19 @@ package org.example;
 
 import org.example.models.MobileData;
 import org.example.models.TopNavigationData;
-import org.example.steps.ShoppingSteps;
+import org.example.steps.SchemaFilterSteps;
+import org.example.steps.SchemaProductSteps;
 import org.example.steps.TopNavigationSteps;
 import org.example.utils.JsonReader;
+import org.example.utils.Utils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MainTest extends BaseTest {
     TopNavigationSteps navigationSteps = new TopNavigationSteps();
-    ShoppingSteps shoppingSteps = new ShoppingSteps();
+    SchemaFilterSteps schemaFilterSteps = new SchemaFilterSteps();
+    SchemaProductSteps schemaProductSteps = new SchemaProductSteps();
+    Utils utils = new Utils();
 
     @Test(description = "Move around the catalog",
             dataProvider = "topNavigationData", dataProviderClass = JsonReader.class)
@@ -22,7 +26,7 @@ public class MainTest extends BaseTest {
         navigationSteps.clickDropDownItem(topNavigationData.getClassifierItemName(), topNavigationData.getAsideItemName(),
                 topNavigationData.getDropDownItemName());
 
-        String actual = shoppingSteps.extractTextFromSchemaHeader();
+        String actual = schemaFilterSteps.extractTextFromSchemaHeader();
         Assert.assertEquals(actual, topNavigationData.getSchemaHeaderText());
     }
 
@@ -35,13 +39,13 @@ public class MainTest extends BaseTest {
                 mobileData.getAsideItemName());
         navigationSteps.clickDropDownItem(mobileData.getClassifierItemName(), mobileData.getAsideItemName(),
                 mobileData.getDropDownItemName());
-        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelManufacturer(), mobileData.getManufacturerName());
-        shoppingSteps.enterMinValueOfLimit(mobileData.getLabelPrice(), mobileData.getMinPrice());
-        shoppingSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
-        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelShop(), mobileData.getShopName());
-        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelDate(), mobileData.getReleaseDate());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelManufacturer(), mobileData.getManufacturerName());
+        schemaFilterSteps.enterMinValueOfLimit(mobileData.getLabelPrice(), mobileData.getMinPrice());
+        schemaFilterSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelShop(), mobileData.getShopName());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelDate(), mobileData.getReleaseDate());
 
-        int actual = shoppingSteps.getNumberFromSchemaFilterButton();
+        int actual = schemaFilterSteps.getNumberFromSchemaFilterButton();
         Assert.assertEquals(actual, mobileData.getNumberOfPhones());
     }
 
@@ -54,14 +58,14 @@ public class MainTest extends BaseTest {
                 mobileData.getAsideItemName());
         navigationSteps.clickDropDownItem(mobileData.getClassifierItemName(), mobileData.getAsideItemName(),
                 mobileData.getDropDownItemName());
-        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelManufacturer(), mobileData.getManufacturerName());
-        shoppingSteps.enterMinValueOfLimit(mobileData.getLabelPrice(), mobileData.getMinPrice());
-        shoppingSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
-        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelShop(), mobileData.getShopName());
-        shoppingSteps.clickSchemaFilterCheckboxItem(mobileData.getLabelDate(), mobileData.getReleaseDate());
-        shoppingSteps.clickTheCheapestProduct();
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelManufacturer(), mobileData.getManufacturerName());
+        schemaFilterSteps.enterMinValueOfLimit(mobileData.getLabelPrice(), mobileData.getMinPrice());
+        schemaFilterSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelShop(), mobileData.getShopName());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelDate(), mobileData.getReleaseDate());
+        schemaProductSteps.clickTheCheapestProduct();
 
-        double actual = shoppingSteps.getOffersDescriptionPrice();
+        double actual = schemaProductSteps.getOffersDescriptionPrice();
         Assert.assertEquals(actual, mobileData.getPriceOfTheCheapestMobile());
     }
 }

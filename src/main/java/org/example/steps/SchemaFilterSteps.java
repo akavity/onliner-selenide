@@ -41,16 +41,45 @@ public class SchemaFilterSteps {
 
     @Step
     public void enterMinValueOfLimit(String label, String minValue) {
-        log.info("enter minValue of " + label + ": " + minValue);
+        log.info("enter Min value of " + label + ": " + minValue);
         schemaFilterPage.getMinValueField(label).scrollTo();
         actions().click(schemaFilterPage.getMinValueField(label)).sendKeys(minValue).perform();
     }
 
     @Step
     public void enterMaxValueOfLimit(String label, String maxValue) {
-        log.info("enter maxValue " + label + ": " + maxValue);
+        log.info("enter Max value of " + label + ": " + maxValue);
         schemaFilterPage.getMaxValueField(label).scrollTo();
         actions().click(schemaFilterPage.getMaxValueField(label)).sendKeys(maxValue).perform();
+    }
+
+    @Step
+    public void enterNimMaxValuesOfLimit(String label, String minValue, String maxValue) {
+        log.info("enter Min value " + minValue + " enter Max value " + maxValue + " of " + label);
+        schemaFilterPage.getMinValueField(label).scrollTo();
+        actions().click(schemaFilterPage.getMinValueField(label)).sendKeys(minValue).perform();
+        actions().click(schemaFilterPage.getMaxValueField(label)).sendKeys(maxValue).perform();
+    }
+
+    @Step
+    public void chooseYesNoButton(String label, String decision) {
+        log.info("chose button: " + decision);
+        schemaFilterPage.getYesNoButton(label, decision).scrollTo();
+        actions().click(schemaFilterPage.getYesNoButton(label, decision)).perform();
+    }
+
+    @Step
+    public void setMinLimitSelector(String label, String minValue) {
+        log.info("set a minimum value of limit for " + label + ": " + minValue);
+        schemaFilterPage.getMinLimitSelector(label).scrollTo();
+        schemaFilterPage.getMinLimitSelector(label).selectOption(minValue);
+    }
+
+    @Step
+    public void setMaxLimitSelector(String label, String maxValue) {
+        log.info("set a maximum value of limit for " + label + ": " + maxValue);
+        schemaFilterPage.getMaxLimitSelector(label).scrollTo();
+        schemaFilterPage.getMaxLimitSelector(label).selectOption(maxValue);
     }
 
     @Step

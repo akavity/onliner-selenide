@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.models.MobileData;
+import org.example.models.MobileDataTask2;
 import org.example.models.TopNavigationData;
 import org.example.steps.SchemaFilterSteps;
 import org.example.steps.SchemaProductSteps;
@@ -32,7 +33,7 @@ public class MainTest extends BaseTest {
 
     @Test(description = "Sorting phones by price, manufacturer, shop, release date",
             dataProvider = "mobileData", dataProviderClass = JsonReader.class)
-    public void chooseMobile(MobileData mobileData) {
+    public void sortingMobileByFilters(MobileData mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
         navigationSteps.clickClassifierItem(mobileData.getClassifierItemName());
         navigationSteps.clickAsideListItem(mobileData.getClassifierItemName(),
@@ -44,6 +45,28 @@ public class MainTest extends BaseTest {
         schemaFilterSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
         schemaFilterSteps.clickCheckboxItem(mobileData.getLabelShop(), mobileData.getShopName());
         schemaFilterSteps.clickCheckboxItem(mobileData.getLabelDate(), mobileData.getReleaseDate());
+
+        int actual = schemaFilterSteps.getNumberFromSchemaFilterButton();
+        Assert.assertEquals(actual, mobileData.getNumberOfPhones());
+    }
+
+    @Test(description = "Sorting phones by price, manufacturer, RAM,  internal memory, memory card support",
+            dataProvider = "mobileDataTask2", dataProviderClass = JsonReader.class)
+    public void sortingMobileByFiltersTask2(MobileDataTask2 mobileData) {
+        navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
+        navigationSteps.clickClassifierItem(mobileData.getClassifierItemName());
+        navigationSteps.clickAsideListItem(mobileData.getClassifierItemName(),
+                mobileData.getAsideItemName());
+        navigationSteps.clickDropDownItem(mobileData.getClassifierItemName(), mobileData.getAsideItemName(),
+                mobileData.getDropDownItemName());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelManufacturer(), mobileData.getManufacturerName());
+        schemaFilterSteps.enterMinValueOfLimit(mobileData.getLabelPrice(), mobileData.getMinPrice());
+        schemaFilterSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
+        schemaFilterSteps.setMinLimitSelector(mobileData.getLabelRAM(), mobileData.getMinRAM());
+        schemaFilterSteps.setMaxLimitSelector(mobileData.getLabelRAM(), mobileData.getMaxRAM());
+        schemaFilterSteps.setMinLimitSelector(mobileData.getLabelInternalMemory(), mobileData.getMinInternalMemory());
+        schemaFilterSteps.setMaxLimitSelector(mobileData.getLabelInternalMemory(), mobileData.getMaxInternalMemory());
+        schemaFilterSteps.chooseYesNoButton(mobileData.getLabelMemoryCardSupport(), mobileData.getSupportMemoryCard());
 
         int actual = schemaFilterSteps.getNumberFromSchemaFilterButton();
         Assert.assertEquals(actual, mobileData.getNumberOfPhones());

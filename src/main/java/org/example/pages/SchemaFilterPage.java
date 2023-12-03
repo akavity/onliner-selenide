@@ -36,24 +36,19 @@ public class SchemaFilterPage {
                 "/../following-sibling::div//div[contains(@class, 'control')][2]"));
     }
 
-    public SelenideElement getYesButton(String label) {
+    public SelenideElement getYesNoButton(String label, String decision) {
         return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//span[contains(text(), 'Да')]"));
-    }
-
-    public SelenideElement getNoButton(String label) {
-        return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//span[contains(text(), 'Нет')]"));
+                "/../following-sibling::div//span[contains(text(), '" + decision + "')]"));
     }
 
     public SelenideElement getMinLimitSelector(String label) {
         return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//div[contains(@class, 'cont')][1]"));
+                "/../following-sibling::div//div[contains(@class, 'cont')][1]/select"));
     }
 
     public SelenideElement getMaxLimitSelector(String label) {
         return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//div[contains(@class, 'cont')][2]"));
+                "/../following-sibling::div//div[contains(@class, 'cont')][2]/select"));
     }
 
     public SelenideElement getFilterButton() {

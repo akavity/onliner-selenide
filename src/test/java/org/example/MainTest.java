@@ -7,7 +7,6 @@ import org.example.steps.SchemaFilterSteps;
 import org.example.steps.SchemaProductSteps;
 import org.example.steps.TopNavigationSteps;
 import org.example.utils.JsonReader;
-import org.example.utils.Utils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,7 +14,6 @@ public class MainTest extends BaseTest {
     TopNavigationSteps navigationSteps = new TopNavigationSteps();
     SchemaFilterSteps schemaFilterSteps = new SchemaFilterSteps();
     SchemaProductSteps schemaProductSteps = new SchemaProductSteps();
-    Utils utils = new Utils();
 
     @Test(description = "Move around the catalog",
             dataProvider = "topNavigationData", dataProviderClass = JsonReader.class)

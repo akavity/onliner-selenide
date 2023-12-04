@@ -1,12 +1,13 @@
 package org.example;
 
+import org.example.annotations.TestData;
 import org.example.models.MobileData;
 import org.example.models.MobileDataTask2;
 import org.example.models.TopNavigationData;
 import org.example.steps.SchemaFilterSteps;
 import org.example.steps.SchemaProductSteps;
 import org.example.steps.TopNavigationSteps;
-import org.example.utils.JsonReader;
+import org.example.utils.JsonReaderGson;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,8 +16,9 @@ public class MainTest extends BaseTest {
     SchemaFilterSteps schemaFilterSteps = new SchemaFilterSteps();
     SchemaProductSteps schemaProductSteps = new SchemaProductSteps();
 
+    @TestData(jsonFile = "mobileData", model = "MobileData")
     @Test(description = "Move around the catalog",
-            dataProvider = "topNavigationData", dataProviderClass = JsonReader.class)
+            dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void moveAroundCatalog(TopNavigationData topNavigationData) {
         navigationSteps.clickTopMenuItem(topNavigationData.getTopMenuItemName());
         navigationSteps.clickClassifierItem(topNavigationData.getClassifierItemName());
@@ -29,8 +31,9 @@ public class MainTest extends BaseTest {
         Assert.assertEquals(actual, topNavigationData.getSchemaHeaderText());
     }
 
+    @TestData(jsonFile = "mobileData", model = "MobileData")
     @Test(description = "Sorting phones by price, manufacturer, shop, release date",
-            dataProvider = "mobileData", dataProviderClass = JsonReader.class)
+            dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void sortingMobileByFilters(MobileData mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
         navigationSteps.clickClassifierItem(mobileData.getClassifierItemName());
@@ -48,8 +51,9 @@ public class MainTest extends BaseTest {
         Assert.assertEquals(actual, mobileData.getNumberOfPhones());
     }
 
+    @TestData(jsonFile = "mobileDataTask2", model = "MobileDataTask2")
     @Test(description = "Sorting phones by price, manufacturer, RAM,  internal memory, memory card support",
-            dataProvider = "mobileDataTask2", dataProviderClass = JsonReader.class)
+            dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void sortingMobileByFiltersTask2(MobileDataTask2 mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
         navigationSteps.clickClassifierItem(mobileData.getClassifierItemName());
@@ -70,8 +74,9 @@ public class MainTest extends BaseTest {
         Assert.assertEquals(actual, mobileData.getNumberOfPhones());
     }
 
+    @TestData(jsonFile = "mobileData", model = "MobileData")
     @Test(description = "Choose the cheapest mobile phone",
-            dataProvider = "mobileData", dataProviderClass = JsonReader.class)
+            dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void chooseTheCheapestMobile(MobileData mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
         navigationSteps.clickClassifierItem(mobileData.getClassifierItemName());

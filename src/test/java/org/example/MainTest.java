@@ -3,6 +3,7 @@ package org.example;
 import org.example.annotations.TestData;
 import org.example.models.MobileData;
 import org.example.models.MobileDataTask2;
+import org.example.models.TabletData;
 import org.example.models.TopNavigationData;
 import org.example.steps.SchemaFilterSteps;
 import org.example.steps.SchemaProductSteps;
@@ -93,5 +94,27 @@ public class MainTest extends BaseTest {
 
         double actual = schemaProductSteps.getOffersDescriptionPrice();
         Assert.assertEquals(actual, mobileData.getPriceOfTheCheapestMobile());
+    }
+
+    @TestData(jsonFile = "tabletData", model = "TabletData")
+    @Test(description = "Sorting tablet by price, manufacturer, shop, release dat and use filter \"Дешевые\" " +
+            "for Order Filter",
+            dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
+    public void sortingTabletsBySchemaFilterAndOrderFilterButton(TabletData tabletData) {
+        navigationSteps.clickTopMenuItem(tabletData.getTopMenuItemName());
+        navigationSteps.clickClassifierItem(tabletData.getClassifierItemName());
+        navigationSteps.clickAsideListItem(tabletData.getClassifierItemName(),
+                tabletData.getAsideItemName());
+        navigationSteps.clickDropDownItem(tabletData.getClassifierItemName(), tabletData.getAsideItemName(),
+                tabletData.getDropDownItemName());
+        schemaFilterSteps.clickCheckboxItem(tabletData.getLabelManufacturer(), tabletData.getManufacturerName());
+        schemaFilterSteps.enterMinValueOfLimit(tabletData.getLabelPrice(), tabletData.getMinPrice());
+        schemaFilterSteps.enterMaxValueOfLimit(tabletData.getLabelPrice(), tabletData.getMaxPrice());
+        schemaFilterSteps.clickCheckboxItem(tabletData.getLabelShop(), tabletData.getShopName());
+        schemaFilterSteps.clickCheckboxItem(tabletData.getLabelDate(), tabletData.getReleaseDate());
+        schemaProductSteps.sortingByOrderFilterButton(tabletData.getFilter());
+
+        double actual = schemaProductSteps.getPriceFirstOrder();
+        Assert.assertEquals(actual, tabletData.getPriceOfTheCheapestTablet());
     }
 }

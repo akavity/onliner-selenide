@@ -63,7 +63,7 @@ public class SchemaFilterSteps {
 
     @Step
     public void chooseYesNoButton(String label, String decision) {
-        log.info("chose button: " + decision);
+        log.info("In section " + label + " chose button: " + decision);
         schemaFilterPage.getYesNoButton(label, decision).scrollTo();
         actions().click(schemaFilterPage.getYesNoButton(label, decision)).perform();
     }

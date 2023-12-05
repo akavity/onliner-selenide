@@ -16,6 +16,22 @@ public class SchemaProductSteps {
     Utils utils = new Utils();
 
     @Step
+    public void sortingByOrderFilterButton(String filter) {
+        schemaProductPage.getOrderFilterButton().scrollTo();
+        schemaProductPage.getOrderFilterButton().click();
+        log.info("click orderFilterButton");
+        //utils.sleep(2000);
+        schemaProductPage.getTypeFilterItem(filter).click();
+        log.info("select a filter for sorting");
+    }
+
+    @Step
+    public double getPriceFirstOrder() {
+        utils.sleep(2000);
+        return getPriceFromElement(schemaProductPage.getPricesOfProductsFields().first());
+    }
+
+    @Step
     public void clickTheCheapestProduct() {
         utils.sleep(3000);
         SelenideElement cash = findTheCheapestProduct(schemaProductPage.getPricesOfProductsFields());
@@ -48,6 +64,7 @@ public class SchemaProductSteps {
     private double getPriceFromElement(SelenideElement element) {
         return Double.parseDouble(element.getText()
                 .replace(",", ".")
-                .replace(" р.", ""));
+                .replace(" р.", ""))
+                * 100 / 100;
     }
 }

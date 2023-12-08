@@ -4,7 +4,6 @@ import org.example.annotations.TestData;
 import org.example.models.MobileData;
 import org.example.models.MobileDataTask2;
 import org.example.models.TabletData;
-import org.example.models.TopNavigationData;
 import org.example.steps.SchemaFilterSteps;
 import org.example.steps.SchemaProductSteps;
 import org.example.steps.TopNavigationSteps;
@@ -12,25 +11,10 @@ import org.example.utils.JsonReaderGson;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MainTest extends BaseTest {
+public class ShoppingTest extends BaseTest {
     TopNavigationSteps navigationSteps = new TopNavigationSteps();
     SchemaFilterSteps schemaFilterSteps = new SchemaFilterSteps();
     SchemaProductSteps schemaProductSteps = new SchemaProductSteps();
-
-    @TestData(jsonFile = "mobileData", model = "MobileData")
-    @Test(description = "Move around the catalog",
-            dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
-    public void moveAroundCatalog(TopNavigationData topNavigationData) {
-        navigationSteps.clickTopMenuItem(topNavigationData.getTopMenuItemName());
-        navigationSteps.clickClassifierItem(topNavigationData.getClassifierItemName());
-        navigationSteps.clickAsideListItem(topNavigationData.getClassifierItemName(),
-                topNavigationData.getAsideItemName());
-        navigationSteps.clickDropDownItem(topNavigationData.getClassifierItemName(), topNavigationData.getAsideItemName(),
-                topNavigationData.getDropDownItemName());
-
-        String actual = schemaFilterSteps.extractTextFromSchemaHeader();
-        Assert.assertEquals(actual, topNavigationData.getSchemaHeaderText());
-    }
 
     @TestData(jsonFile = "mobileData", model = "MobileData")
     @Test(description = "Sorting phones by price, manufacturer, shop, release date",

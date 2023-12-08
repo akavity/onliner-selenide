@@ -1,12 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="MainTest">
     <test name="MainTest" parallel="false">
         <classes>
-            <class name="org.example.MainTest">
+            <class name="org.example.CatalogTest">
                 <methods>
                     <include name="moveAroundCatalog"/>
-                    <include name="chooseMobile"/>
+                </methods>
+            </class>
+            <class name="org.example.ShoppingTest">
+                <methods>
+                    <include name="sortingMobileByFilters"/>
+                    <include name="sortingMobileByFiltersTask2"/>
                     <include name="chooseTheCheapestMobile"/>
+                    <include name="sortingTabletsBySchemaFilterAndOrderFilterButton"/>
                 </methods>
             </class>
         </classes>

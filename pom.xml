@@ -33,7 +33,7 @@
                 <version>3.0.0-M1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testNg.xml</suiteXmlFile>
+                        <suiteXmlFile>${suitFile}</suiteXmlFile>
                     </suiteXmlFiles>
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
@@ -68,7 +68,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.19.0</version>
+            <version>6.15.0</version>
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -92,12 +92,6 @@
             <artifactId>log4j-core</artifactId>
             <version>2.20.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.10</version>
-        </dependency>
-
 
     </dependencies>
 

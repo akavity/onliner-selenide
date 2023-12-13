@@ -17,7 +17,7 @@ public class MainTest extends BaseTest {
     SchemaFilterSteps schemaFilterSteps = new SchemaFilterSteps();
     SchemaProductSteps schemaProductSteps = new SchemaProductSteps();
 
-    @TestData(jsonFile = "mobileData", model = "MobileData")
+    @TestData(jsonFile = "topNavigationData", model = "TopNavigationData")
     @Test(description = "Move around the catalog",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void moveAroundCatalog(TopNavigationData topNavigationData) {

@@ -20,7 +20,6 @@ public class SchemaProductSteps {
         schemaProductPage.getOrderFilterButton().scrollTo();
         schemaProductPage.getOrderFilterButton().click();
         log.info("click orderFilterButton");
-        //utils.sleep(2000);
         schemaProductPage.getTypeFilterItem(filter).click();
         log.info("select a filter for sorting");
     }

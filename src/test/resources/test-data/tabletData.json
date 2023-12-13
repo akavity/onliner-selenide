@@ -1,0 +1,19 @@
+[
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Электроника",
+    "asideItemName": "Планшеты",
+    "dropDownItemName": "Планшеты",
+    "labelManufacturer": "Производитель",
+    "manufacturerName": "Lenovo",
+    "labelPrice": "Цена",
+    "minPrice": "400",
+    "maxPrice": "800",
+    "labelShop": "Магазин",
+    "shopName": "Agroup",
+    "labelDate": "Дата выхода на рынок",
+    "releaseDate": "2022",
+    "filter" : "Дешевые",
+    "priceOfTheCheapestTablet" : 549.00
+  }
+]

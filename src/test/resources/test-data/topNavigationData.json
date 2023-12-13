@@ -103,5 +103,201 @@
     "asideItemName": "Ноутбуки",
     "dropDownItemName" : "Профессиональные мониторы",
     "schemaHeaderText" : "Профессиональные мониторы"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Ноутбуки",
+    "dropDownItemName" : "Моноблоки",
+    "schemaHeaderText" : "Моноблоки"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Ноутбуки",
+    "dropDownItemName" : "Компьютеры",
+    "schemaHeaderText" : "Компьютеры"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Ноутбуки",
+    "dropDownItemName" : "Профессиональные мониторы",
+    "schemaHeaderText" : "Профессиональные мониторы"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": " Комплектующие ",
+    "dropDownItemName" : "Видеокарты",
+    "schemaHeaderText" : "Видеокарты"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": " Комплектующие ",
+    "dropDownItemName" : "Материнские платы",
+    "schemaHeaderText" : "Материнские платы"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Комплектующие",
+    "dropDownItemName" : "Системы охлаждения",
+    "schemaHeaderText" : "Системы охлаждения"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Комплектующие",
+    "dropDownItemName" : "майнинга",
+    "schemaHeaderText" : "Аппаратные кошельки для криптовалют"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Хранение данных",
+    "dropDownItemName" : "SSD",
+    "schemaHeaderText" : "SSD"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Хранение данных",
+    "dropDownItemName" : "Внешние накопители",
+    "schemaHeaderText" : "Внешние накопители"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Хранение данных",
+    "dropDownItemName" : "Карт-ридеры",
+    "schemaHeaderText" : "Карт-ридеры"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Компьютеры",
+    "asideItemName": "Хранение данных",
+    "dropDownItemName" : "Сетевые накопители",
+    "schemaHeaderText" : "Сетевые накопители (NAS)"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Крупногабаритная техника",
+    "dropDownItemName" : "Холодильники",
+    "schemaHeaderText" : "Холодильники"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Крупногабаритная техника",
+    "dropDownItemName" : "Стиральные машины",
+    "schemaHeaderText" : "Стиральные машины"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Крупногабаритная техника",
+    "dropDownItemName" : "Винные шкафы",
+    "schemaHeaderText" : "Винные шкафы"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Уборка",
+    "dropDownItemName" : "Пароочистители",
+    "schemaHeaderText" : "Пароочистители"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Уборка",
+    "dropDownItemName" : "Роботы-пылесосы",
+    "schemaHeaderText" : "Роботы-пылесосы"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Уборка",
+    "dropDownItemName" : "Стеклоочистители",
+    "schemaHeaderText" : "Пылесосы для окон"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Уборка",
+    "dropDownItemName" : "Электровеники",
+    "schemaHeaderText" : "Электровеники, подметальные машины"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Приготовление кофе",
+    "dropDownItemName" : "Кофемашины",
+    "schemaHeaderText" : "Кофемашины"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Приготовление кофе",
+    "dropDownItemName" : "Вспениватели молока",
+    "schemaHeaderText" : "Вспениватели молока"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Бытовая техника",
+    "asideItemName": "Приготовление кофе",
+    "dropDownItemName" : "Кофе в зернах",
+    "schemaHeaderText" : "Зерновой кофе"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Стройка",
+    "asideItemName": "Сантехника",
+    "dropDownItemName" : "Полотенцесушители",
+    "schemaHeaderText" : "Полотенцесушители"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Стройка",
+    "asideItemName": "Сантехника",
+    "dropDownItemName" : "Умывальники",
+    "schemaHeaderText" : "Умывальники"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Стройка",
+    "asideItemName": "Сантехника",
+    "dropDownItemName" : "Кухонные мойки",
+    "schemaHeaderText" : "Кухонные мойки"
+  },
+  {
+  "topMenuItemName": "Каталог",
+  "classifierItemName": "Стройка",
+  "asideItemName": "Инструмент",
+  "dropDownItemName" : "Шлифмашины",
+  "schemaHeaderText" : "Шлифмашины"
+},
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Стройка",
+    "asideItemName": "Инструмент",
+    "dropDownItemName" : "Сабельные пилы",
+    "schemaHeaderText" : "Сабельные пилы"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Стройка",
+    "asideItemName": "Инструмент",
+    "dropDownItemName" : "Мультифункциональные",
+    "schemaHeaderText" : "Мультифункциональные шлифмашины"
+  },
+  {
+    "topMenuItemName": "Каталог",
+    "classifierItemName": "Стройка",
+    "asideItemName": "Инструмент",
+    "dropDownItemName" : "Штроборезы",
+    "schemaHeaderText" : "Штроборезы"
   }
 ]

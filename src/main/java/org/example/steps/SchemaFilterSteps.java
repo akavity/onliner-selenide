@@ -84,14 +84,23 @@ public class SchemaFilterSteps {
 
     @Step
     public void clickControlMoreButton(String label) {
-        log.info("Click schema filter drop down");
+        log.info("Click control more button");
+        schemaFilterPage.getControlMoreButton(label).scrollTo();
         schemaFilterPage.getControlMoreButton(label).click();
     }
 
     @Step
     public void clickPopoverColumnItem(String label, String itemName) {
         log.info("Click popover visible item");
+        schemaFilterPage.getPopoverColumnItem(label, itemName).scrollTo();
         schemaFilterPage.getPopoverColumnItem(label, itemName).click();
+    }
+
+    @Step
+    public void clickAdditionalParamButton() {
+        log.info("Click Button and get more parameters");
+        schemaFilterPage.getAdditionalParametersButton().scrollTo();
+        schemaFilterPage.getAdditionalParametersButton().click();
     }
 
     @Step

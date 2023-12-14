@@ -31,6 +31,12 @@ public class SchemaProductSteps {
     }
 
     @Step
+    public String getNameFirstOrder() {
+        utils.sleep(2000);
+        return schemaProductPage.getProductsNamesFields().first().getText();
+    }
+
+    @Step
     public void clickTheCheapestProduct() {
         utils.sleep(3000);
         SelenideElement cash = findTheCheapestProduct(schemaProductPage.getPricesOfProductsFields());

@@ -97,8 +97,7 @@ public class MainTest extends BaseTest {
     }
 
     @TestData(jsonFile = "tabletData", model = "TabletData")
-    @Test(description = "Sorting tablet by price, manufacturer, shop, release dat and use filter \"Дешевые\" " +
-            "for Order Filter",
+    @Test(description = "Sorting tablet by price, manufacturer, shop, release dat and use oderFilterButton",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void sortingTabletsBySchemaFilterAndOrderFilterButton(TabletData tabletData) {
         navigationSteps.clickTopMenuItem(tabletData.getTopMenuItemName());
@@ -114,7 +113,7 @@ public class MainTest extends BaseTest {
         schemaFilterSteps.clickCheckboxItem(tabletData.getLabelDate(), tabletData.getReleaseDate());
         schemaProductSteps.sortingByOrderFilterButton(tabletData.getFilter());
 
-        double actual = schemaProductSteps.getPriceFirstOrder();
-        Assert.assertEquals(actual, tabletData.getPriceOfTheCheapestTablet());
+        String actual = schemaProductSteps.getNameFirstOrder();
+        Assert.assertTrue(actual.contains(tabletData.getPieceOfName()));
     }
 }

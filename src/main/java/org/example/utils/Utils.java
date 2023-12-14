@@ -8,8 +8,4 @@ public class Utils {
             throw new RuntimeException(e);
         }
     }
-
-    public double roundOf(double number) {
-        return Math.round(number * 100.0) / 100.0;
-    }
 }

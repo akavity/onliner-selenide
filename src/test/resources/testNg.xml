@@ -5,8 +5,10 @@
             <class name="org.example.MainTest">
                 <methods>
                     <include name="moveAroundCatalog"/>
-                    <include name="chooseMobile"/>
+                    <include name="sortingMobileByFilters"/>
+                    <include name="sortingMobileByFiltersTask2"/>
                     <include name="chooseTheCheapestMobile"/>
+                    <include name="sortingTabletsBySchemaFilterAndOrderFilterButton"/>
                 </methods>
             </class>
         </classes>

@@ -8,6 +8,7 @@ import org.example.pages.SchemaProductPage;
 import org.example.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Log4j2
@@ -37,9 +38,17 @@ public class SchemaProductSteps {
     }
 
     @Step
-    public void clickTheCheapestProduct() {
+    public void clickTheCheapestProductOnThePage() {
         utils.sleep(3000);
-        SelenideElement cash = findTheCheapestProduct(schemaProductPage.getPricesOfProductsFields());
+        SelenideElement cash = findTheCheapestProductOnThePage(schemaProductPage.getPricesOfProductsFields());
+        cash.scrollTo();
+        cash.click();
+    }
+
+    @Step
+    public void clickTheCheapestProductOnThePageStream() {
+        utils.sleep(3000);
+        SelenideElement cash = findTheCheapestProductOnThePageByStream(schemaProductPage.getPricesOfProductsFields());
         cash.scrollTo();
         cash.click();
     }
@@ -49,7 +58,7 @@ public class SchemaProductSteps {
         return getPriceFromElement(schemaProductPage.getOffersDescriptionPriceField());
     }
 
-    private SelenideElement findTheCheapestProduct(ElementsCollection el) {
+    private SelenideElement findTheCheapestProductOnThePage(ElementsCollection el) {
         log.info("Size of the created array : " + el.size());
         List<SelenideElement> pricesOfProducts = new ArrayList<>(el);
         SelenideElement theCheapestElement = pricesOfProducts.get(0);
@@ -66,7 +75,22 @@ public class SchemaProductSteps {
         return theCheapestElement;
     }
 
-    private double getPriceFromElement(SelenideElement element) {
+    private SelenideElement findTheCheapestProductOnThePageByStream(ElementsCollection el) {
+        return el.asDynamicIterable()
+                .stream()
+                .filter(x -> getPriceFromElement(x) > 0)
+                .min(priceComparator)
+                .orElse(null);
+    }
+
+    Comparator<SelenideElement> priceComparator = new Comparator<SelenideElement>() {
+        @Override
+        public int compare(SelenideElement element1, SelenideElement element2) {
+            return getPriceFromElement(element1).compareTo(getPriceFromElement(element2));
+        }
+    };
+
+    private Double getPriceFromElement(SelenideElement element) {
         return Double.parseDouble(element.getText()
                 .replace(",", ".")
                 .replace(" р.", ""))

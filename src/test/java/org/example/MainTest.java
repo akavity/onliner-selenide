@@ -5,6 +5,7 @@ import org.example.models.MobileData;
 import org.example.models.MobileDataTask2;
 import org.example.models.TabletData;
 import org.example.models.TopNavigationData;
+import org.example.steps.ProductSteps;
 import org.example.steps.SchemaFilterSteps;
 import org.example.steps.SchemaProductSteps;
 import org.example.steps.TopNavigationSteps;
@@ -16,6 +17,7 @@ public class MainTest extends BaseTest {
     TopNavigationSteps navigationSteps = new TopNavigationSteps();
     SchemaFilterSteps schemaFilterSteps = new SchemaFilterSteps();
     SchemaProductSteps schemaProductSteps = new SchemaProductSteps();
+    ProductSteps productSteps = new ProductSteps();
 
     @TestData(jsonFile = "topNavigationData", model = "TopNavigationData")
     @Test(description = "Move around the catalog",
@@ -90,10 +92,31 @@ public class MainTest extends BaseTest {
         schemaFilterSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
         schemaFilterSteps.clickCheckboxItem(mobileData.getLabelShop(), mobileData.getShopName());
         schemaFilterSteps.clickCheckboxItem(mobileData.getLabelDate(), mobileData.getReleaseDate());
-        schemaProductSteps.clickTheCheapestProduct();
+        schemaProductSteps.clickTheCheapestProductOnThePage();
 
         double actual = schemaProductSteps.getOffersDescriptionPrice();
         Assert.assertEquals(actual, mobileData.getPriceOfTheCheapestMobile());
+    }
+
+    @TestData(jsonFile = "mobileData", model = "MobileData")
+    @Test(description = "Choose the cheapest mobile phone by Stream",
+            dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
+    public void chooseTheCheapestMobileSteam(MobileData mobileData) {
+        navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
+        navigationSteps.clickClassifierItem(mobileData.getClassifierItemName());
+        navigationSteps.clickAsideListItem(mobileData.getClassifierItemName(),
+                mobileData.getAsideItemName());
+        navigationSteps.clickDropDownItem(mobileData.getClassifierItemName(), mobileData.getAsideItemName(),
+                mobileData.getDropDownItemName());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelManufacturer(), mobileData.getManufacturerName());
+        schemaFilterSteps.enterMinValueOfLimit(mobileData.getLabelPrice(), mobileData.getMinPrice());
+        schemaFilterSteps.enterMaxValueOfLimit(mobileData.getLabelPrice(), mobileData.getMaxPrice());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelShop(), mobileData.getShopName());
+        schemaFilterSteps.clickCheckboxItem(mobileData.getLabelDate(), mobileData.getReleaseDate());
+        schemaProductSteps.clickTheCheapestProductOnThePageStream();
+
+        String actual = productSteps.extractTextFromProductHeader();
+        Assert.assertTrue(actual.contains(mobileData.getPieceOfName()));
     }
 
     @TestData(jsonFile = "tabletData", model = "TabletData")

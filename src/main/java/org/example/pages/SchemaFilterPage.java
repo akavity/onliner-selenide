@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SchemaFilterPage {
-    public SelenideElement schemaHeaderField = $(By.xpath("//div[@class='schema-header']/h1"));
+    private final SelenideElement schemaHeaderField = $(By.xpath("//div[@class='schema-header']/h1"));
     private final SelenideElement filterButton = $(By.xpath("//span[contains(@class, 'n__sub_m')]"));
     private final SelenideElement additionalParametersButton = $(By.xpath("//div[contains(@class, 'addi')]/div/a"));
 

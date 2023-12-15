@@ -108,7 +108,7 @@ public class SchemaFilterSteps {
         utils.sleep(3000);
         int result = 0;
         String text = schemaFilterPage.getFilterButton().getText();
-        log.info("Text from FilterButton: " + schemaFilterPage.getFilterButton().getText());
+        log.info("Text from FilterButton: " + text);
         Pattern pattern = Pattern.compile("\\d+( \\d+)?");
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {

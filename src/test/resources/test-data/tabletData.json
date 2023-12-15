@@ -13,8 +13,8 @@
     "shopName": "Agroup",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "filter" : "Дешевые",
-    "pieceOfName" : "TB-328XU 4GB/64GB"
+    "filter": "Дешевые",
+    "pieceOfName": "TB-328XU 4GB/64GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -30,8 +30,8 @@
     "shopName": "Мобилайн",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "filter" : "Дешевые",
-    "pieceOfName" : "64GB MPQ13"
+    "filter": "Дешевые",
+    "pieceOfName": "64GB MPQ13"
   },
   {
     "topMenuItemName": "Каталог",
@@ -47,8 +47,8 @@
     "shopName": "Мобилайн",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "filter" : "Дешевые",
-    "pieceOfName" : "P613 4GB/64GB"
+    "filter": "Дешевые",
+    "pieceOfName": "P613 4GB/64GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -64,8 +64,8 @@
     "shopName": "Мобилайн",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "filter" : "Популярные",
-    "pieceOfName" : "P613 4GB/128GB"
+    "filter": "Популярные",
+    "pieceOfName": "SM-P619 4GB/128GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -81,8 +81,8 @@
     "shopName": "Мобилайн",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "filter" : "Популярные",
-    "pieceOfName" : "64GB MM9C3"
+    "filter": "Популярные",
+    "pieceOfName": "64GB MM9C3"
   },
   {
     "topMenuItemName": "Каталог",
@@ -98,7 +98,7 @@
     "shopName": "Agroup",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "filter" : "Популярные",
-    "pieceOfName" : "TB-128XU 4GB/64GB"
+    "filter": "Популярные",
+    "pieceOfName": "TB-128XU 4GB/64GB"
   }
 ]

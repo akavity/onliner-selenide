@@ -8,13 +8,14 @@
     "manufacturerName": "Samsung",
     "labelPrice": "Цена",
     "minPrice": "300",
-    "maxPrice": "420",
+    "maxPrice": "720",
     "labelShop": "Магазин",
     "shopName": "Мобилайн",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "numberOfPhones": 5,
-    "priceOfTheCheapestMobile" : 388.64
+    "numberOfPhones": 7,
+    "priceOfTheCheapestMobile": 399.00,
+    "pieceOfName": "SM-A047F/DS 3GB/32GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -31,24 +32,8 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
     "numberOfPhones": 5,
-    "priceOfTheCheapestMobile" : 1300.00
-  },
-  {
-    "topMenuItemName": "Каталог",
-    "classifierItemName": "Электроника",
-    "asideItemName": "Мобильные телефоны",
-    "dropDownItemName": "Смартфоны",
-    "labelManufacturer": "Производитель",
-    "manufacturerName": "Apple",
-    "labelPrice": "Цена",
-    "minPrice": "3000",
-    "maxPrice": "3500",
-    "labelShop": "Магазин",
-    "shopName": "Agroup",
-    "labelDate": "Дата выхода на рынок",
-    "releaseDate": "2022",
-    "numberOfPhones": 10,
-    "priceOfTheCheapestMobile" : 3010.00
+    "priceOfTheCheapestMobile": 1450.00,
+    "pieceOfName": "Pixel 6 8GB/128GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -65,7 +50,8 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
     "numberOfPhones": 6,
-    "priceOfTheCheapestMobile" : 495.00
+    "priceOfTheCheapestMobile": 469.89,
+    "pieceOfName": "10 NFC 4GB/64GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -82,7 +68,8 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2023",
     "numberOfPhones": 6,
-    "priceOfTheCheapestMobile" : 800
+    "priceOfTheCheapestMobile": 789,
+    "pieceOfName": "X5 5G 6GB/128GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -97,9 +84,10 @@
     "labelShop": "Магазин",
     "shopName": "Agroup",
     "labelDate": "Дата выхода на рынок",
-    "releaseDate": "2022",
-    "numberOfPhones": 3,
-    "priceOfTheCheapestMobile" : 399.00
+    "releaseDate": "2023",
+    "numberOfPhones": 24,
+    "priceOfTheCheapestMobile": 369.00,
+    "pieceOfName": "X5 Plus 4GB/64GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -107,16 +95,17 @@
     "asideItemName": "Мобильные телефоны",
     "dropDownItemName": "Смартфоны",
     "labelManufacturer": "Производитель",
-    "manufacturerName": "HONOR",
+    "manufacturerName": "Infinix",
     "labelPrice": "Цена",
-    "minPrice": "500",
-    "maxPrice": "1000",
+    "minPrice": "300",
+    "maxPrice": "800",
     "labelShop": "Магазин",
-    "shopName": "ONLINE",
+    "shopName": "ТехноМир",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2023",
-    "numberOfPhones": 15,
-    "priceOfTheCheapestMobile" : 550.00
+    "numberOfPhones": 25,
+    "priceOfTheCheapestMobile": 339.00,
+    "pieceOfName": "X669D 8GB/128GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -133,6 +122,7 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
     "numberOfPhones": 3,
-    "priceOfTheCheapestMobile" : 660.00
+    "priceOfTheCheapestMobile": 660.00,
+    "pieceOfName": "Realme 8 6GB/128GB"
   }
 ]

@@ -22,5 +22,5 @@ public class TabletData {
     String labelDate;
     String releaseDate;
     String filter;
-    double priceOfTheCheapestTablet;
+    String pieceOfName;
 }

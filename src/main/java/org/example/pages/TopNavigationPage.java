@@ -16,11 +16,11 @@ public class TopNavigationPage {
     }
 
     public SelenideElement getAsideListItem(String dataId, String asideItemName) {
-        return $(By.xpath("//div[@data-id='" + dataId + "']//div[contains(text(),'" + asideItemName + "')]"));
+        return $(By.xpath("//div[@data-id='" + dataId + "']//div[contains(text(),'" + asideItemName + "')]/.."));
     }
 
     public SelenideElement getDropDownItem(String dataId, String asideItemName, String dropDownItemName) {
         return $(By.xpath("//div[@data-id='" + dataId + "']//div[contains(text()," +
-                " '" + asideItemName + "')]//..//span[contains(text(), '" + dropDownItemName + "')]"));
+                " '" + asideItemName + "')]//..//span[contains(text(), '" + dropDownItemName + "')]/ancestor::a"));
     }
 }

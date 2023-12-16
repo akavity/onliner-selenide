@@ -7,7 +7,7 @@
 * Test 3. Check the filtering result (price, manufacturer, RAM,  internal memory, memory card support)
 * Test 4. Find the cheapest product on the page using a for loop
 * Test 5. Find the cheapest product on the page using Stream.
-* Test 6. Find the cheapest product on the page using the filter button.
+* Test 6. Find the cheapest product using the filter button.
 
 ##Technologies:
 

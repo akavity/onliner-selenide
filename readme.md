@@ -9,8 +9,7 @@
 * Test 5. Find the cheapest product on the page using Stream.
 * Test 6. Find the cheapest product on the page using the filter button.
 
-##Technologies
-Project is created with:
+##Technologies:
 
 * Java 17
 * Apache Maven 3.7.0

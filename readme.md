@@ -12,8 +12,8 @@
 ##Technologies
 Project is created with:
 
-Java 17
-Apache Maven 3.7.0
-TestNG 7.0.0
-Selenide 6.19.0
-Allure 2.22.2
+* Java 17
+* Apache Maven 3.7.0
+* TestNG 7.0.0
+* Selenide 6.19.0
+* Allure 2.22.2

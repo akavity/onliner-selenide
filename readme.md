@@ -1,6 +1,6 @@
-#Automated Tests for the Onliner.by
+# Automated Tests for the Onliner.by
 
-##General info:
+## General info:
 
 * Test 1. Navigate through the catalogue.
 * Test 2. Check the filtering result (price, manufacturer, store, release date)
@@ -9,7 +9,7 @@
 * Test 5. Find the cheapest product on the page using Stream.
 * Test 6. Find the cheapest product using the filter button.
 
-##Technologies:
+## Technologies:
 
 * Java 17
 * Apache Maven 3.7.0

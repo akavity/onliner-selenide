@@ -13,8 +13,8 @@
     "shopName": "Мобилайн",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "numberOfPhones": 7,
-    "priceOfTheCheapestMobile": 399.00,
+    "numberOfPhones": 6,
+    "priceOfTheCheapestMobile": 379.00,
     "pieceOfName": "SM-A047F/DS 3GB/32GB"
   },
   {
@@ -32,7 +32,7 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
     "numberOfPhones": 5,
-    "priceOfTheCheapestMobile": 1450.00,
+    "priceOfTheCheapestMobile": 1495.00,
     "pieceOfName": "Pixel 6 8GB/128GB"
   },
   {
@@ -68,7 +68,7 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2023",
     "numberOfPhones": 6,
-    "priceOfTheCheapestMobile": 789,
+    "priceOfTheCheapestMobile": 800.00,
     "pieceOfName": "X5 5G 6GB/128GB"
   },
   {
@@ -85,8 +85,8 @@
     "shopName": "Agroup",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2023",
-    "numberOfPhones": 24,
-    "priceOfTheCheapestMobile": 369.00,
+    "numberOfPhones": 22,
+    "priceOfTheCheapestMobile": 309.00,
     "pieceOfName": "X5 Plus 4GB/64GB"
   },
   {
@@ -118,11 +118,11 @@
     "minPrice": "500",
     "maxPrice": "800",
     "labelShop": "Магазин",
-    "shopName": "Media",
+    "shopName": "ТехноМир",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
-    "numberOfPhones": 3,
-    "priceOfTheCheapestMobile": 660.00,
-    "pieceOfName": "Realme 8 6GB/128GB"
+    "numberOfPhones": 5,
+    "priceOfTheCheapestMobile": 540.00,
+    "pieceOfName": "RMX3430 4GB/128GB"
   }
 ]

@@ -21,37 +21,42 @@ public class AuthContainerSteps {
         log.info("Enter the password: " + password);
     }
 
-    public void clickSubmitButton() {
-        authContainerPage.getSubmitField().click();
+    public void clickAuthButton() {
+        authContainerPage.getAuthButton().click();
         log.info("Click the submit button");
     }
 
-    public void clickRegButton() {
-        authContainerPage.getRegisterButton().click();
+    public void clickRegField() {
+        authContainerPage.getRegisterField().click();
         log.info("Click the registration button");
     }
 
     // Registration
 
-    public void enterAuthPassword(String password) {
-        authContainerPage.getAuthPasswordField().sendKeys(password);
+    public void enterRegPassword(String password) {
+        authContainerPage.getRegPasswordField().sendKeys(password);
         log.info("Enter the authorization password: " + password);
     }
 
-    public void repeatAuthPassword(String password) {
-        authContainerPage.getRepeatAuthPasField().sendKeys(password);
+    public void repeatRegPassword(String password) {
+        authContainerPage.getRepeatRegPasswordField().sendKeys(password);
         log.info("Repeat the authorization password: " + password);
     }
 
-    public void clickAuthButton() {
-        authContainerPage.getAuthButton().click();
+    public void giveConsent() {
+        authContainerPage.getConsentItem().click();
+        log.info("Give consent");
+    }
+
+    public void clickRegisterButton() {
+        authContainerPage.getRegisterButton().click();
         log.info("Click the authorization button");
     }
 
     public boolean isThereAnError(String error) {
-        utils.sleep(2000);
+        utils.sleep(1000);
         boolean result = authContainerPage.getErrorField(error).isDisplayed();
-        log.info("is the error field displayed: " + result);
+        log.info("/// Is the error('" + error + "') field displayed: " + result);
         return result;
     }
 }

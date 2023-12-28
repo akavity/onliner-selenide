@@ -8,11 +8,12 @@ import static com.codeborne.selenide.Selenide.$;
 public class AuthContainerPage {
     private final SelenideElement nickField = $(By.xpath("//input[contains(@placeholder, 'e-mail')]"));
     private final SelenideElement passwordField = $(By.xpath("//input[@placeholder='Пароль']"));
-    private final SelenideElement submitField = $(By.xpath("//button[contains(text(), 'Войти')]"));
-    private final SelenideElement registerButton = $(By.xpath("//a[contains(text(), 'Зарегист')]"));
-    private final SelenideElement authPasswordField = $(By.xpath("//input[contains(@placeholder, 'Придум')]"));
-    private final SelenideElement repeatAuthPasField = $(By.xpath("//input[contains(@placeholder, 'Повтор')]"));
-    private final SelenideElement authButton = $(By.xpath("//button[@type='submit']"));
+    private final SelenideElement authButton = $(By.xpath("//button[contains(text(), 'Войти')]"));
+    private final SelenideElement registerField = $(By.xpath("//a[contains(text(), 'Зарегист')]"));
+    private final SelenideElement regPasswordField = $(By.xpath("//input[contains(@placeholder, 'Придум')]"));
+    private final SelenideElement repeatRegPasField = $(By.xpath("//input[contains(@placeholder, 'Повтор')]"));
+    private final SelenideElement consentItem = $(By.xpath("//span[@class=\"auth-checkbox__faux\"]"));
+    private final SelenideElement registerButton = $(By.xpath("//button[@type='submit']"));
 
     public SelenideElement getErrorField(String error) {
         return $(By.xpath("//div[contains(@class, 'on_error') and contains (text(), '" + error + "')]"));
@@ -26,23 +27,27 @@ public class AuthContainerPage {
         return passwordField;
     }
 
-    public SelenideElement getSubmitField() {
-        return submitField;
+    public SelenideElement getAuthButton() {
+        return authButton;
+    }
+
+    public SelenideElement getRegisterField() {
+        return registerField;
+    }
+
+    public SelenideElement getRegPasswordField() {
+        return regPasswordField;
+    }
+
+    public SelenideElement getRepeatRegPasswordField() {
+        return repeatRegPasField;
     }
 
     public SelenideElement getRegisterButton() {
         return registerButton;
     }
 
-    public SelenideElement getAuthPasswordField() {
-        return authPasswordField;
-    }
-
-    public SelenideElement getRepeatAuthPasField() {
-        return repeatAuthPasField;
-    }
-
-    public SelenideElement getAuthButton() {
-        return authButton;
+    public SelenideElement getConsentItem() {
+        return consentItem;
     }
 }

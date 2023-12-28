@@ -1,0 +1,27 @@
+[
+  {
+    "nick": "nickSanchez",
+    "password": "",
+    "error": "Укажите пароль"
+  },
+  {
+    "nick": "",
+    "password": "123sanchez321",
+    "error": "Укажите ник или e-mail"
+  },
+  {
+    "nick": "nickSanchez",
+    "password": "123sanchez321",
+    "error": "Неверный логин или пароль"
+  },
+  {
+    "nick": "",
+    "password": "",
+    "error": "Укажите пароль"
+  },
+  {
+    "nick": "",
+    "password": "",
+    "error": "Укажите ник или e-mail"
+  }
+]

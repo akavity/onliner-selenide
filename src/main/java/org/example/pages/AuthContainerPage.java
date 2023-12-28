@@ -11,7 +11,7 @@ public class AuthContainerPage {
     private final SelenideElement submitField = $(By.xpath("//button[contains(text(), 'Войти')]"));
     private final SelenideElement registerButton = $(By.xpath("//a[contains(text(), 'Зарегист')]"));
     private final SelenideElement authPasswordField = $(By.xpath("//input[contains(@placeholder, 'Придум')]"));
-    private final SelenideElement authRepeatPasField = $(By.xpath("//input[contains(@placeholder, 'Повтор')]"));
+    private final SelenideElement repeatAuthPasField = $(By.xpath("//input[contains(@placeholder, 'Повтор')]"));
     private final SelenideElement authButton = $(By.xpath("//button[@type='submit']"));
 
     public SelenideElement getErrorField(String error) {
@@ -38,8 +38,8 @@ public class AuthContainerPage {
         return authPasswordField;
     }
 
-    public SelenideElement getAuthRepeatPasField() {
-        return authRepeatPasField;
+    public SelenideElement getRepeatAuthPasField() {
+        return repeatAuthPasField;
     }
 
     public SelenideElement getAuthButton() {

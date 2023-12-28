@@ -9,6 +9,8 @@ public class AuthContainerSteps {
     AuthContainerPage authContainerPage = new AuthContainerPage();
     Utils utils = new Utils();
 
+    // Log in
+
     public void enterNick(String nick) {
         authContainerPage.getNickField().sendKeys(nick);
         log.info("Enter nick or email: " + nick);
@@ -29,6 +31,8 @@ public class AuthContainerSteps {
         log.info("Click the registration button");
     }
 
+    // Registration
+
     public void enterAuthPassword(String password) {
         authContainerPage.getAuthPasswordField().sendKeys(password);
         log.info("Enter the authorization password: " + password);
@@ -45,7 +49,7 @@ public class AuthContainerSteps {
     }
 
     public boolean isThereAnError(String error) {
-        utils.sleep(1000);
+        utils.sleep(2000);
         boolean result = authContainerPage.getErrorField(error).isDisplayed();
         log.info("is the error field displayed: " + result);
         return result;

@@ -34,6 +34,12 @@ public class TopNavigationSteps {
         topNavigation.getDropDownItem(dataId, asideItemName, dropDownItemName).click();
     }
 
+    @Step("Click authorization button")
+    public void clickAuthorizationButton() {
+        topNavigation.getAuthButton().click();
+        log.info("Click the authorization button");
+    }
+
     public String getDataId(String classifierItemName) {
         String id = "";
         switch (classifierItemName) {

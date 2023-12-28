@@ -1,0 +1,44 @@
+[
+  {
+    "nick": "1111",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "arturMir@inbox",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "arturMir@inbox.",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Укажите e-mail"
+  },
+  {
+    "nick": "arturMir@inbox.ru",
+    "password": "",
+    "repeatPassword": "1234dsfdg",
+    "error": "Укажите пароль"
+  },
+  {
+    "nick": "arturMir@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "",
+    "error": "Укажите пароль"
+  }
+]

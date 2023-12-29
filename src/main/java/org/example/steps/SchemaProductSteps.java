@@ -59,7 +59,7 @@ public class SchemaProductSteps {
     }
 
     private SelenideElement findTheCheapestProductOnThePage(ElementsCollection el) {
-        log.info("Size of the created array : " + el.size());
+        log.info("Size of the created array: " + el.size());
         List<SelenideElement> pricesOfProducts = new ArrayList<>(el);
         SelenideElement theCheapestElement = pricesOfProducts.get(0);
         double lowPrice = getPriceFromElement(pricesOfProducts.get(0));
@@ -71,7 +71,7 @@ public class SchemaProductSteps {
             }
         }
 
-        log.info("The cheapest product has price :" + lowPrice);
+        log.info("The cheapest product has price: " + lowPrice);
         return theCheapestElement;
     }
 

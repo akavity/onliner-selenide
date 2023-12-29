@@ -56,7 +56,7 @@ public class AuthContainerSteps {
     public boolean isThereAnError(String error) {
         utils.sleep(1000);
         boolean result = authContainerPage.getErrorField(error).isDisplayed();
-        log.info("/// Is the error('" + error + "') field displayed: " + result);
+        log.info("/// Is the error field ('" + error + "') displayed: " + result);
         return result;
     }
 }

@@ -18,7 +18,61 @@
     "error": "Некорректный e-mail"
   },
   {
+    "nick": "arturMirinbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
     "nick": "@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "artu@rMir@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "artur№ir@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "artur:ir@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "art;urir@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "arturi[r@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "art]urir@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "artur(=ir@inbox.ru",
+    "password": "1234dsfdg",
+    "repeatPassword": "1234dsfdg",
+    "error": "Некорректный e-mail"
+  },
+  {
+    "nick": "ar\"turir@inbox.ru",
     "password": "1234dsfdg",
     "repeatPassword": "1234dsfdg",
     "error": "Некорректный e-mail"
@@ -40,5 +94,23 @@
     "password": "1234dsfdg",
     "repeatPassword": "",
     "error": "Укажите пароль"
+  },
+  {
+    "nick": "arturMir@inbox.ru",
+    "password": "123",
+    "repeatPassword": "123",
+    "error": "Пароль должен быть от 8 до 64 символов"
+  },
+  {
+    "nick": "arturMir@inbox.ru",
+    "password": "123456789009876543211234567890098765432112345678900987654321123456",
+    "repeatPassword": "123456789009876543211234567890098765432112345678900987654321123456",
+    "error": "Пароль должен быть от 8 до 64 символов"
+  },
+  {
+    "nick": "arturMir@inbox.ru",
+    "password": "12345678",
+    "repeatPassword": "12354687",
+    "error": "Пароли не совпадают"
   }
 ]

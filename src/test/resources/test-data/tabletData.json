@@ -65,7 +65,7 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
     "filter": "Популярные",
-    "pieceOfName": "SM-P619 4GB/128GB"
+    "pieceOfName": "SM-P619 4GB/64GB"
   },
   {
     "topMenuItemName": "Каталог",
@@ -82,23 +82,6 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
     "filter": "Популярные",
-    "pieceOfName": "64GB MM9C3"
-  },
-  {
-    "topMenuItemName": "Каталог",
-    "classifierItemName": "Электроника",
-    "asideItemName": "Планшеты",
-    "dropDownItemName": "Планшеты",
-    "labelManufacturer": "Производитель",
-    "manufacturerName": "Lenovo",
-    "labelPrice": "Цена",
-    "minPrice": "400",
-    "maxPrice": "800",
-    "labelShop": "Магазин",
-    "shopName": "Agroup",
-    "labelDate": "Дата выхода на рынок",
-    "releaseDate": "2022",
-    "filter": "Популярные",
-    "pieceOfName": "TB-128XU 4GB/64GB"
+    "pieceOfName": "MPQ13"
   }
 ]

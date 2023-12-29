@@ -11,6 +11,12 @@
                     <include name="sortingTabletsBySchemaFilterAndOrderFilterButton"/>
                 </methods>
             </class>
+            <class name="org.example.LogInTest">
+                <methods>
+                    <include name="enterIncorrectNickOrPassword"/>
+                    <include name="getRegistrationError"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

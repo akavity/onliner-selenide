@@ -1,5 +1,6 @@
 package org.example.steps;
 
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.example.pages.SchemaFilterPage;
@@ -17,90 +18,81 @@ public class SchemaFilterSteps {
 
     @Step
     public String extractTextFromSchemaHeader() {
-        log.info("//// Extract text from Schema Head: " + schemaFilterPage.getSchemaHeadField().getText());
-        return schemaFilterPage.getSchemaHeadField().getText();
-    }
-
-    @Step
-    public void closeControlElement() {
-        if (schemaFilterPage.getFilterButton().isDisplayed()) {
-            log.info("Found control element");
-            schemaFilterPage.getFilterButton().click();
-            log.info("Control element is closed");
-        }
-        log.info("Control element not found");
+        String result = schemaFilterPage.getSchemaHeadField().getText();
+        log.info("//// Extract text from Schema Head: " + result);
+        return result;
     }
 
     @Step
     public void clickCheckboxItem(String label, String checkBoxItemName) {
         log.info("click checkBox Item: " + checkBoxItemName);
-        schemaFilterPage.getCheckboxItem(label, checkBoxItemName).scrollTo();
-        actions().moveToElement(schemaFilterPage.getCheckboxItem(label, checkBoxItemName))
-                .click(schemaFilterPage.getCheckboxItem(label, checkBoxItemName)).perform();
+        SelenideElement element = schemaFilterPage.getCheckboxItem(label, checkBoxItemName);
+        element.scrollTo();
+        actions().click(element).perform();
     }
 
     @Step
     public void enterMinValueOfLimit(String label, String minValue) {
         log.info("enter Min value of " + label + ": " + minValue);
-        schemaFilterPage.getMinValueField(label).scrollTo();
-        actions().click(schemaFilterPage.getMinValueField(label)).sendKeys(minValue).perform();
+        SelenideElement element = schemaFilterPage.getMinValueField(label);
+        element.scrollTo();
+        actions().click(element).sendKeys(minValue).perform();
     }
 
     @Step
     public void enterMaxValueOfLimit(String label, String maxValue) {
         log.info("enter Max value of " + label + ": " + maxValue);
-        schemaFilterPage.getMaxValueField(label).scrollTo();
-        actions().click(schemaFilterPage.getMaxValueField(label)).sendKeys(maxValue).perform();
-    }
-
-    @Step
-    public void enterNimMaxValuesOfLimit(String label, String minValue, String maxValue) {
-        log.info("enter Min value " + minValue + " enter Max value " + maxValue + " of " + label);
-        schemaFilterPage.getMinValueField(label).scrollTo();
-        actions().click(schemaFilterPage.getMinValueField(label)).sendKeys(minValue).perform();
-        actions().click(schemaFilterPage.getMaxValueField(label)).sendKeys(maxValue).perform();
+        SelenideElement element = schemaFilterPage.getMaxValueField(label);
+        element.scrollTo();
+        actions().click(element).sendKeys(maxValue).perform();
     }
 
     @Step
     public void chooseYesNoButton(String label, String decision) {
         log.info("In section " + label + " chose button: " + decision);
-        schemaFilterPage.getYesNoButton(label, decision).scrollTo();
-        actions().click(schemaFilterPage.getYesNoButton(label, decision)).perform();
+        SelenideElement element = schemaFilterPage.getYesNoButton(label, decision);
+        element.scrollTo();
+        actions().click(element).perform();
     }
 
     @Step
     public void setMinLimitSelector(String label, String minValue) {
         log.info("set a minimum value of limit for " + label + ": " + minValue);
-        schemaFilterPage.getMinLimitSelector(label).scrollTo();
-        schemaFilterPage.getMinLimitSelector(label).selectOption(minValue);
+        SelenideElement element = schemaFilterPage.getMinLimitSelector(label);
+        element.scrollTo();
+        element.selectOption(minValue);
     }
 
     @Step
     public void setMaxLimitSelector(String label, String maxValue) {
         log.info("set a maximum value of limit for " + label + ": " + maxValue);
-        schemaFilterPage.getMaxLimitSelector(label).scrollTo();
-        schemaFilterPage.getMaxLimitSelector(label).selectOption(maxValue);
+        SelenideElement element = schemaFilterPage.getMaxLimitSelector(label);
+        element.scrollTo();
+        element.selectOption(maxValue);
     }
 
     @Step
     public void clickControlMoreButton(String label) {
         log.info("Click control more button");
-        schemaFilterPage.getControlMoreButton(label).scrollTo();
-        schemaFilterPage.getControlMoreButton(label).click();
+        SelenideElement element = schemaFilterPage.getControlMoreButton(label);
+        element.scrollTo();
+        element.click();
     }
 
     @Step
     public void clickPopoverColumnItem(String label, String itemName) {
         log.info("Click popover visible item");
-        schemaFilterPage.getPopoverColumnItem(label, itemName).scrollTo();
-        schemaFilterPage.getPopoverColumnItem(label, itemName).click();
+        SelenideElement element = schemaFilterPage.getPopoverColumnItem(label, itemName);
+        element.scrollTo();
+        element.click();
     }
 
     @Step
     public void clickAdditionalParamButton() {
         log.info("Click Button and get more parameters");
-        schemaFilterPage.getAdditionalParametersButton().scrollTo();
-        schemaFilterPage.getAdditionalParametersButton().click();
+        SelenideElement element = schemaFilterPage.getAdditionalParametersButton();
+        element.scrollTo();
+        element.click();
     }
 
     @Step

@@ -3,11 +3,11 @@ package org.example.steps;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
-import org.example.pages.HousePage;
+import org.example.pages.HouseApartmentPage;
 
 @Log4j2
-public class HouseSteps {
-    HousePage housePage = new HousePage();
+public class HouseApartmentSteps {
+    HouseApartmentPage housePage = new HouseApartmentPage();
 
     @Step
     public void enterMinValueOfLimit(String title, String minValue) {
@@ -20,13 +20,13 @@ public class HouseSteps {
     @Step
     public void enterMaxValueOfLimit(String title, String maxValue) {
         log.info("enter Max value of " + title + ": " + maxValue);
-        SelenideElement element = housePage.getMaxValueField(maxValue);
+        SelenideElement element = housePage.getMaxValueField(title);
         element.click();
         element.sendKeys(maxValue);
     }
 
     @Step
-    public void choseNumberOfRooms(int number) {
+    public void chooseNumberOfRooms(int number) {
         log.info("Number of rooms: " + number);
         housePage.getNumberOfRooms(number).click();
     }
@@ -38,7 +38,7 @@ public class HouseSteps {
     }
 
     @Step
-    public void choseMaterial(String material) {
+    public void chooseMaterial(String material) {
         log.info("Click material drop down");
         housePage.getMaterialsDropDown().click();
         log.info("Chose material" + material);
@@ -47,7 +47,7 @@ public class HouseSteps {
         housePage.getMaterialsDropDown().click();
     }
     @Step
-    public void choseMaterial(String material, String material2) {
+    public void chooseMaterial(String material, String material2) {
         log.info("Click material drop down");
         housePage.getMaterialsDropDown().click();
         log.info("Chose material" + material);
@@ -59,7 +59,7 @@ public class HouseSteps {
     }
 
     @Step
-    public void choseMaterial(String material, String material2, String material3) {
+    public void chooseMaterial(String material, String material2, String material3) {
         log.info("Click material drop down");
         housePage.getMaterialsDropDown().click();
         log.info("Chose material" + material);
@@ -73,7 +73,7 @@ public class HouseSteps {
     }
 
     @Step
-    public void choseMaterial(String material, String material2, String material3, String material4) {
+    public void chooseMaterial(String material, String material2, String material3, String material4) {
         log.info("Click material drop down");
         housePage.getMaterialsDropDown().click();
         log.info("Chose material" + material);
@@ -88,17 +88,6 @@ public class HouseSteps {
         housePage.getMaterialsDropDown().click();
     }
 
-//    @Step
-//    public void clickMaterialDropDown() {
-//        log.info("Click material drop down");
-//        housePage.getMaterialsDropDown().click();
-//    }
-//
-//    @Step
-//    public void clickMaterialElement(String material) {
-//        housePage.getMaterialElement(material).click();
-//    }
-
     @Step
     public void clickUnsuitableFloorButton() {
         log.info("Click unsuitable floor Button");
@@ -109,5 +98,10 @@ public class HouseSteps {
     public void enterAddress(String address) {
         log.info("Enter address: " + address);
         housePage.getAddressField().sendKeys(address);
+    }
+
+    @Step
+    public void clickFirstAccommodation() {
+        housePage.getAccommodationsList().first().click();
     }
 }

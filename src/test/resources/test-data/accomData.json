@@ -1,0 +1,41 @@
+[
+  {
+    "topMenuItemName": "Дома и квартиры",
+    "titlePrice": "price",
+    "minPrice": "40000",
+    "maxPrice": "55000",
+    "numberRooms": 2,
+    "titleArea": "area",
+    "minArea": "21",
+    "maxArea": "47",
+    "material": "Кирпич",
+    "typeHome": "Вторичка",
+    "address": "Минск"
+  },
+  {
+    "topMenuItemName": "Дома и квартиры",
+    "titlePrice": "price",
+    "minPrice": "50000",
+    "maxPrice": "85000",
+    "numberRooms": 3,
+    "titleArea": "area",
+    "minArea": "21",
+    "maxArea": "85",
+    "material": "Панель",
+    "typeHome": "Вторичка",
+    "address": "Минск"
+  },
+  {
+    "topMenuItemName": "Дома и квартиры",
+    "titlePrice": "price",
+    "minPrice": "30000",
+    "maxPrice": "40000",
+    "numberRooms": 1,
+    "titleArea": "area",
+    "minArea": "21",
+    "maxArea": "40",
+    "material": "Монолит",
+    "typeHome": "Вторичка",
+    "address": "Минск"
+  }
+]

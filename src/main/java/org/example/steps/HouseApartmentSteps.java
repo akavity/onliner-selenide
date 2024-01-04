@@ -4,10 +4,12 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.example.pages.HouseApartmentPage;
+import org.example.utils.Utils;
 
 @Log4j2
 public class HouseApartmentSteps {
     HouseApartmentPage housePage = new HouseApartmentPage();
+    Utils utils = new Utils();
 
     @Step
     public void enterMinValueOfLimit(String title, String minValue) {
@@ -46,6 +48,7 @@ public class HouseApartmentSteps {
         log.info("Click material drop down");
         housePage.getMaterialsDropDown().click();
     }
+
     @Step
     public void chooseMaterial(String material, String material2) {
         log.info("Click material drop down");
@@ -98,10 +101,13 @@ public class HouseApartmentSteps {
     public void enterAddress(String address) {
         log.info("Enter address: " + address);
         housePage.getAddressField().sendKeys(address);
+        utils.sleep(3000);
+
     }
 
     @Step
     public void clickFirstAccommodation() {
+        log.info("Click first accommodation on the page");
         housePage.getAccommodationsList().first().click();
     }
 }

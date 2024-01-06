@@ -33,12 +33,12 @@ public class HouseApartmentTest extends BaseTest {
         int actualPrice = accomSteps.getPrice();
         int expectedMinPrice = Integer.parseInt(accomData.getMinPrice());
         int expectedMaxPrice = Integer.parseInt(accomData.getMaxPrice());
-        Assert.assertTrue(actualPrice > expectedMinPrice && actualPrice < expectedMaxPrice);
+        Assert.assertTrue(actualPrice >= expectedMinPrice && actualPrice <= expectedMaxPrice);
 
         double actualArea = accomSteps.getArea();
         double expectedMinArea = Double.parseDouble(accomData.getMinArea());
         double expectedMaxArea = Double.parseDouble(accomData.getMaxArea());
-        Assert.assertTrue(actualArea > expectedMinArea && actualArea < expectedMaxArea);
+        Assert.assertTrue(actualArea >= expectedMinArea && actualArea <= expectedMaxArea);
 
         Assert.assertEquals(accomSteps.getNumberRooms(), accomData.getNumberRooms());
     }

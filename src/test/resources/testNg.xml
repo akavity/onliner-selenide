@@ -17,6 +17,11 @@
                     <include name="getRegistrationError"/>
                 </methods>
             </class>
+            <class name="org.example.HouseApartmentTest">
+                <methods>
+                    <include name="lookForAccommodation"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

@@ -91,9 +91,10 @@ public class SchemaProductSteps {
     };
 
     private Double getPriceFromElement(SelenideElement element) {
-        return Double.parseDouble(element.getText()
-                .replace(",", ".")
-                .replace(" р.", ""))
-                * 100 / 100;
+        String text = element.getText();
+        log.info("Text from element: " + text);
+        double result = utils.extractDoubleFromText(text, "\\d*,\\d{2}");
+        log.info("Extract double from text: " + result);
+        return result;
     }
 }

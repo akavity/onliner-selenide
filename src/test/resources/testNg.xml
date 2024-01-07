@@ -8,6 +8,7 @@
                     <include name="sortingMobileByFilters"/>
                     <include name="sortingMobileByFiltersTask2"/>
                     <include name="chooseTheCheapestMobile"/>
+                    <include name="chooseTheCheapestMobileSteam"/>
                     <include name="sortingTabletsBySchemaFilterAndOrderFilterButton"/>
                 </methods>
             </class>

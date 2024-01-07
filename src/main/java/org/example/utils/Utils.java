@@ -31,4 +31,8 @@ public class Utils {
         }
         return result;
     }
+
+    public int getRandomNumber(int max) {
+        return (int) (Math.random() * ++max);
+    }
 }

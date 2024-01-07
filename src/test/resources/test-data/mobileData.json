@@ -14,8 +14,8 @@
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
     "numberOfPhones": 6,
-    "priceOfTheCheapestMobile": 379.00,
-    "pieceOfName": "SM-A047F/DS 3GB/32GB"
+    "priceOfTheCheapestMobile": 339.00,
+    "pieceOfName": "SM-A047F/DS"
   },
   {
     "topMenuItemName": "Каталог",
@@ -23,17 +23,17 @@
     "asideItemName": "Мобильные телефоны",
     "dropDownItemName": "Смартфоны",
     "labelManufacturer": "Производитель",
-    "manufacturerName": "Google",
+    "manufacturerName": "HONOR",
     "labelPrice": "Цена",
-    "minPrice": "1000",
-    "maxPrice": "2000",
+    "minPrice": "300",
+    "maxPrice": "1000",
     "labelShop": "Магазин",
-    "shopName": "ONLINE",
+    "shopName": "ТехноМир",
     "labelDate": "Дата выхода на рынок",
-    "releaseDate": "2021",
-    "numberOfPhones": 5,
-    "priceOfTheCheapestMobile": 1495.00,
-    "pieceOfName": "Pixel 6 8GB/128GB"
+    "releaseDate": "2023",
+    "numberOfPhones": 20,
+    "priceOfTheCheapestMobile": 369.00,
+    "pieceOfName": "HONOR X5 Plus"
   },
   {
     "topMenuItemName": "Каталог",
@@ -44,14 +44,14 @@
     "manufacturerName": "Xiaomi",
     "labelPrice": "Цена",
     "minPrice": "300",
-    "maxPrice": "500",
+    "maxPrice": "800",
     "labelShop": "Магазин",
-    "shopName": "ONLINE",
+    "shopName": "ТехноМир",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2021",
-    "numberOfPhones": 6,
-    "priceOfTheCheapestMobile": 469.89,
-    "pieceOfName": "10 NFC 4GB/64GB"
+    "numberOfPhones": 11,
+    "priceOfTheCheapestMobile": 494.00,
+    "pieceOfName": "Xiaomi Redmi 10"
   },
   {
     "topMenuItemName": "Каталог",
@@ -59,17 +59,17 @@
     "asideItemName": "Мобильные телефоны",
     "dropDownItemName": "Смартфоны",
     "labelManufacturer": "Производитель",
-    "manufacturerName": "POCO",
+    "manufacturerName": "Apple",
     "labelPrice": "Цена",
-    "minPrice": "700",
-    "maxPrice": "900",
+    "minPrice": "1500",
+    "maxPrice": "3000",
     "labelShop": "Магазин",
-    "shopName": "ONLINE",
+    "shopName": "ТехноМир",
     "labelDate": "Дата выхода на рынок",
-    "releaseDate": "2023",
-    "numberOfPhones": 6,
-    "priceOfTheCheapestMobile": 800.00,
-    "pieceOfName": "X5 5G 6GB/128GB"
+    "releaseDate": "2022",
+    "numberOfPhones": 13,
+    "priceOfTheCheapestMobile": 1890.00,
+    "pieceOfName": "iPhone SE"
   },
   {
     "topMenuItemName": "Каталог",
@@ -87,7 +87,7 @@
     "releaseDate": "2023",
     "numberOfPhones": 22,
     "priceOfTheCheapestMobile": 309.00,
-    "pieceOfName": "X5 Plus 4GB/64GB"
+    "pieceOfName": "X5 Plus"
   },
   {
     "topMenuItemName": "Каталог",
@@ -105,7 +105,7 @@
     "releaseDate": "2023",
     "numberOfPhones": 25,
     "priceOfTheCheapestMobile": 339.00,
-    "pieceOfName": "X669D 8GB/128GB"
+    "pieceOfName": "X669D"
   },
   {
     "topMenuItemName": "Каталог",
@@ -123,6 +123,6 @@
     "releaseDate": "2021",
     "numberOfPhones": 5,
     "priceOfTheCheapestMobile": 540.00,
-    "pieceOfName": "RMX3430 4GB/128GB"
+    "pieceOfName": "RMX3430"
   }
 ]

@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MobileDataTask2 {
+public class MobileMemoryData {
     String topMenuItemName;
     String classifierItemName;
     String asideItemName;

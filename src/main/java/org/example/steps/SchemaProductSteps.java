@@ -22,35 +22,43 @@ public class SchemaProductSteps {
         schemaProductPage.getOrderFilterButton().click();
         log.info("click orderFilterButton");
         schemaProductPage.getTypeFilterItem(filter).click();
-        log.info("select a filter for sorting");
+        log.info("select a filter for sorting: " + filter);
     }
 
     @Step
     public double getPriceFirstOrder() {
         utils.sleep(2000);
-        return getPriceFromElement(schemaProductPage.getPricesOfProductsFields().first());
+        double price = getPriceFromElement(schemaProductPage.getPricesOfProductsFields().first());
+        log.info("Price of the first order: " + price);
+        return price;
     }
 
     @Step
     public String getNameFirstOrder() {
         utils.sleep(2000);
-        return schemaProductPage.getProductsNamesFields().first().getText();
+        String name = schemaProductPage.getProductsNamesFields().first().getText();
+        log.info("Name of the first order: " + name);
+        return name;
     }
 
     @Step
     public void clickTheCheapestProductOnThePage() {
         utils.sleep(3000);
+        log.info("Find the cheapest product on the page");
         SelenideElement cash = findTheCheapestProductOnThePage(schemaProductPage.getPricesOfProductsFields());
         cash.scrollTo();
         cash.click();
+        log.info("Click the cheapest product on the page");
     }
 
     @Step
     public void clickTheCheapestProductOnThePageStream() {
         utils.sleep(3000);
+        log.info("Find the cheapest product on the page by Stream");
         SelenideElement cash = findTheCheapestProductOnThePageByStream(schemaProductPage.getPricesOfProductsFields());
         cash.scrollTo();
         cash.click();
+        log.info("Click the cheapest product on the page by Stream");
     }
 
     @Step

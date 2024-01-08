@@ -25,5 +25,6 @@ public class MobileMemoryData {
     String maxInternalMemory;
     String labelMemoryCardSupport;
     String supportMemoryCard;
-    int numberOfPhones;
+    String filter;
+    String pieceOfName;
 }

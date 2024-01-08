@@ -17,8 +17,6 @@ public class TabletData {
     String maxPrice;
     String labelManufacturer;
     String manufacturerName;
-    String labelShop;
-    String shopName;
     String labelDate;
     String releaseDate;
     String filter;

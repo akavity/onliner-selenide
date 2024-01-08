@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="MainTest">
-    <test name="MainTest" parallel="false">
+<suite name="Test">
+    <test name="Test" parallel="false">
         <classes>
             <class name="org.example.MainTest">
                 <methods>

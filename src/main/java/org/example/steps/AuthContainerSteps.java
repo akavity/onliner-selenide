@@ -12,45 +12,45 @@ public class AuthContainerSteps {
     // Log in
 
     public void enterNick(String nick) {
-        authContainerPage.getNickField().sendKeys(nick);
         log.info("Enter nick or email: " + nick);
+        authContainerPage.getNickField().sendKeys(nick);
     }
 
     public void enterPassword(String password) {
-        authContainerPage.getPasswordField().sendKeys(password);
         log.info("Enter the password: " + password);
+        authContainerPage.getPasswordField().sendKeys(password);
     }
 
     public void clickAuthButton() {
-        authContainerPage.getAuthButton().click();
         log.info("Click the submit button");
+        authContainerPage.getAuthButton().click();
     }
 
     public void clickRegField() {
-        authContainerPage.getRegisterField().click();
         log.info("Click the registration button");
+        authContainerPage.getRegisterField().click();
     }
 
     // Registration
 
     public void enterRegPassword(String password) {
-        authContainerPage.getRegPasswordField().sendKeys(password);
         log.info("Enter the authorization password: " + password);
+        authContainerPage.getRegPasswordField().sendKeys(password);
     }
 
     public void repeatRegPassword(String password) {
-        authContainerPage.getRepeatRegPasswordField().sendKeys(password);
         log.info("Repeat the authorization password: " + password);
+        authContainerPage.getRepeatRegPasswordField().sendKeys(password);
     }
 
     public void giveConsent() {
-        authContainerPage.getConsentItem().click();
         log.info("Give consent");
+        authContainerPage.getConsentItem().click();
     }
 
     public void clickRegisterButton() {
-        authContainerPage.getRegisterButton().click();
         log.info("Click the authorization button");
+        authContainerPage.getRegisterButton().click();
     }
 
     public boolean isThereAnError(String error) {

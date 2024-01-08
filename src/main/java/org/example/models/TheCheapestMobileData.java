@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TabletData {
+public class TheCheapestMobileData {
     String topMenuItemName;
     String classifierItemName;
     String asideItemName;
@@ -17,8 +17,9 @@ public class TabletData {
     String maxPrice;
     String labelManufacturer;
     String manufacturerName;
+    String labelShop;
+    String shopName;
     String labelDate;
     String releaseDate;
-    String filter;
     String pieceOfName;
 }

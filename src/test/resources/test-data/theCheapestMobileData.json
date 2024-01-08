@@ -8,11 +8,12 @@
     "manufacturerName": "Samsung",
     "labelPrice": "Цена",
     "minPrice": "300",
-    "maxPrice": "800",
+    "maxPrice": "720",
     "labelShop": "Магазин",
-    "shopName": "ТТН",
-    "filter": "Дешевые",
-    "pieceOfName": "Galaxy A04e"
+    "shopName": "Мобилайн",
+    "labelDate": "Дата выхода на рынок",
+    "releaseDate": "2022",
+    "pieceOfName": "SM-A047F/DS"
   },
   {
     "topMenuItemName": "Каталог",
@@ -26,8 +27,9 @@
     "maxPrice": "1000",
     "labelShop": "Магазин",
     "shopName": "ТехноМир",
-    "filter": "Дорогие",
-    "pieceOfName": "HONOR X9a"
+    "labelDate": "Дата выхода на рынок",
+    "releaseDate": "2023",
+    "pieceOfName": "HONOR X5 Plus"
   },
   {
     "topMenuItemName": "Каталог",
@@ -37,12 +39,13 @@
     "labelManufacturer": "Производитель",
     "manufacturerName": "Xiaomi",
     "labelPrice": "Цена",
-    "minPrice": "400",
+    "minPrice": "300",
     "maxPrice": "800",
     "labelShop": "Магазин",
     "shopName": "ТехноМир",
-    "filter": "Популярные",
-    "pieceOfName": "13C"
+    "labelDate": "Дата выхода на рынок",
+    "releaseDate": "2021",
+    "pieceOfName": "Xiaomi Redmi 10"
   },
   {
     "topMenuItemName": "Каталог",
@@ -55,9 +58,10 @@
     "minPrice": "1500",
     "maxPrice": "3000",
     "labelShop": "Магазин",
-    "shopName": "JUST-MOBILE",
-    "filter": "Дорогие",
-    "pieceOfName": "13 mini"
+    "shopName": "ТехноМир",
+    "labelDate": "Дата выхода на рынок",
+    "releaseDate": "2022",
+    "pieceOfName": "iPhone SE"
   },
   {
     "topMenuItemName": "Каталог",
@@ -71,7 +75,8 @@
     "maxPrice": "900",
     "labelShop": "Магазин",
     "shopName": "Agroup",
-    "filter": "Дешевые",
+    "labelDate": "Дата выхода на рынок",
+    "releaseDate": "2023",
     "pieceOfName": "X5 Plus"
   },
   {
@@ -86,8 +91,9 @@
     "maxPrice": "800",
     "labelShop": "Магазин",
     "shopName": "ТехноМир",
-    "filter": "Популярные",
-    "pieceOfName": "Note 30 Pro"
+    "labelDate": "Дата выхода на рынок",
+    "releaseDate": "2023",
+    "pieceOfName": "X669D"
   },
   {
     "topMenuItemName": "Каталог",
@@ -100,8 +106,9 @@
     "minPrice": "500",
     "maxPrice": "800",
     "labelShop": "Магазин",
-    "shopName": "JUST-MOBILE",
-    "filter": "Дешевые",
-    "pieceOfName": "Narzo 50A"
+    "shopName": "ТехноМир",
+    "labelDate": "Дата выхода на рынок",
+    "releaseDate": "2021",
+    "pieceOfName": "RMX3430"
   }
 ]

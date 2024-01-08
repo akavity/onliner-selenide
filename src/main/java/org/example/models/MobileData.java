@@ -19,9 +19,6 @@ public class MobileData {
     String manufacturerName;
     String labelShop;
     String shopName;
-    String labelDate;
-    String releaseDate;
+    String filter;
     String pieceOfName;
-    int numberOfPhones;
-    double priceOfTheCheapestMobile;
 }

@@ -3,13 +3,14 @@
 ## General info:
 
 * Test 1. Navigate through the catalogue.
-* Test 2. Check the filtering result (price, manufacturer, store, release date)
+* Test 2. Check the filtering result (price, manufacturer, store)
 * Test 3. Check the filtering result (price, manufacturer, RAM,  internal memory, memory card support)
-* Test 4. Find the cheapest product on the page using a for loop
+* Test 4. Find the cheapest product on the page using a for loop.
 * Test 5. Find the cheapest product on the page using Stream.
 * Test 6. Find the cheapest product using the filter button.
 * Test 7. Enter an incorrect nickname or password when logging in.
-* Test 8. Enter incorrect data when registering.
+* Test 8. Enter an incorrect data when registering.
+* Test 9. Check the filtering result when searching for an apartment.
 
 ## Technologies:
 

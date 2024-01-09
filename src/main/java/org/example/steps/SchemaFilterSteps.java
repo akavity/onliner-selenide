@@ -6,9 +6,6 @@ import lombok.extern.log4j.Log4j2;
 import org.example.pages.SchemaFilterPage;
 import org.example.utils.Utils;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import static com.codeborne.selenide.Selenide.actions;
 
 @Log4j2
@@ -73,7 +70,7 @@ public class SchemaFilterSteps {
 
     @Step
     public void clickControlMoreButton(String label) {
-        log.info("Click control more button");
+        log.info("Click control more button: " + label);
         SelenideElement element = schemaFilterPage.getControlMoreButton(label);
         element.scrollTo();
         element.click();
@@ -81,7 +78,7 @@ public class SchemaFilterSteps {
 
     @Step
     public void clickPopoverColumnItem(String label, String itemName) {
-        log.info("Click popover visible item");
+        log.info("Click item: " + itemName);
         SelenideElement element = schemaFilterPage.getPopoverColumnItem(label, itemName);
         element.scrollTo();
         element.click();
@@ -98,14 +95,9 @@ public class SchemaFilterSteps {
     @Step
     public int getNumberFromSchemaFilterButton() {
         utils.sleep(3000);
-        int result = 0;
         String text = schemaFilterPage.getFilterButton().getText();
         log.info("Text from FilterButton: " + text);
-        Pattern pattern = Pattern.compile("\\d+( \\d+)?");
-        Matcher matcher = pattern.matcher(text);
-        while (matcher.find()) {
-            result = Integer.parseInt(matcher.group().replace(" ", ""));
-        }
+        int result = utils.extractIntFromText(text, "\\d+( \\d+)?");
         log.info("Found number phones: " + result);
         return result;
     }

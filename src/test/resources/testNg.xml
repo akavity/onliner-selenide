@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="MainTest">
-    <test name="MainTest" parallel="false">
+<suite name="Test">
+    <test name="Test" parallel="false">
         <classes>
             <class name="org.example.MainTest">
                 <methods>
@@ -8,6 +8,7 @@
                     <include name="sortingMobileByFilters"/>
                     <include name="sortingMobileByFiltersTask2"/>
                     <include name="chooseTheCheapestMobile"/>
+                    <include name="chooseTheCheapestMobileSteam"/>
                     <include name="sortingTabletsBySchemaFilterAndOrderFilterButton"/>
                 </methods>
             </class>
@@ -15,6 +16,11 @@
                 <methods>
                     <include name="enterIncorrectNickOrPassword"/>
                     <include name="getRegistrationError"/>
+                </methods>
+            </class>
+            <class name="org.example.HouseApartmentTest">
+                <methods>
+                    <include name="lookForAccommodation"/>
                 </methods>
             </class>
         </classes>

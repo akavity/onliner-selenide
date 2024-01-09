@@ -31,7 +31,7 @@ public class MainTest extends BaseTest {
     }
 
     @TestData(jsonFile = "mobileData", model = "MobileData")
-    @Test(description = "Sorting phones by price, manufacturer, shop",
+    @Test(description = "Sorting phones by price, manufacturer, shop, oderFilterButton",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void sortingMobileByFilters(MobileData mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
@@ -51,7 +51,7 @@ public class MainTest extends BaseTest {
     }
 
     @TestData(jsonFile = "mobileMemoryData", model = "MobileMemoryData")
-    @Test(description = "Sorting phones by price, manufacturer, RAM,  internal memory, memory card support",
+    @Test(description = "Sorting phones by price, manufacturer, RAM, internal memory, memory card support, oderFilterButton",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void sortingMobileByFiltersTask2(MobileMemoryData mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
@@ -74,7 +74,7 @@ public class MainTest extends BaseTest {
     }
 
     @TestData(jsonFile = "theCheapestMobileData", model = "TheCheapestMobileData")
-    @Test(description = "Choose the cheapest mobile phone",
+    @Test(description = "Select the cheapest mobile phone by for loop, sorting phones by price, manufacturer, release date",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void chooseTheCheapestMobile(TheCheapestMobileData mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
@@ -95,7 +95,7 @@ public class MainTest extends BaseTest {
     }
 
     @TestData(jsonFile = "theCheapestMobileData", model = "TheCheapestMobileData")
-    @Test(description = "Choose the cheapest mobile phone by Stream",
+    @Test(description = "Select the cheapest mobile phone by Stream, sorting phones by price, manufacturer, release date",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void chooseTheCheapestMobileSteam(TheCheapestMobileData mobileData) {
         navigationSteps.clickTopMenuItem(mobileData.getTopMenuItemName());
@@ -116,7 +116,7 @@ public class MainTest extends BaseTest {
     }
 
     @TestData(jsonFile = "tabletData", model = "TabletData")
-    @Test(description = "Sorting tablet by price, manufacturer, release dat and use oderFilterButton",
+    @Test(description = "Sorting tablet by price, manufacturer, release dat, oderFilterButton",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void sortingTabletsBySchemaFilterAndOrderFilterButton(TabletData tabletData) {
         navigationSteps.clickTopMenuItem(tabletData.getTopMenuItemName());

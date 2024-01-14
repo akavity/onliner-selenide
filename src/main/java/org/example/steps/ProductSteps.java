@@ -14,4 +14,16 @@ public class ProductSteps {
         log.info("//// Extract text from Product Head: " + result);
         return result;
     }
+
+    @Step
+    public void addToCart() {
+        log.info("Added first product to cart");
+        productPage.getCartButtons().first().click();
+    }
+
+    @Step
+    public void clickRecommendedCartButton() {
+        log.info("Click recommended cart button");
+        productPage.getRecommendedCartButton().click();
+    }
 }

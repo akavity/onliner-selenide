@@ -13,14 +13,14 @@ public class TopActionsSteps {
 
     public void enterProductName(String name) {
         topActionsPage.getFastSearchField().click();
-        log.info("Enter the product name to search");
+        log.info("Enter the product name to search: " + name);
         topActionsPage.getFastSearchField().sendKeys(name);
         utils.sleep(3000);
     }
 
     public void clickFirstProduct() {
         log.info("Switch to frame");
-        switchTo().frame(topActionsPage.getModalIframe());
+        switchTo().frame(topActionsPage.getModalIframe());  //  iframe
         log.info("Click first product");
         topActionsPage.getProductTitleFields().first().click();
     }

@@ -11,6 +11,9 @@ public class ProductPage {
     private final SelenideElement productHeaderField = $(By.xpath("//div[@class='catalog-masthead']/h1"));
     private final ElementsCollection cartButtons = $$(By.xpath("//a[contains(@class,'button_cart')]"));
     private final SelenideElement recommendedCartButton = $(By.xpath("//a[contains(text(),'в корзину')]"));
+    private final SelenideElement recommendedSidebarAside = $(By.xpath("//div[contains(@class,'sidebar-aside')]"));
+    private final SelenideElement yourCityPopUpWindow = $(By.xpath("//div[contains(@class,'style_visible')]"));
+    private final SelenideElement yesCityButton = $(By.xpath("//span[contains(text(),'Да, верно']"));
 
     public SelenideElement getProductHeaderField() {
         return productHeaderField;
@@ -22,5 +25,17 @@ public class ProductPage {
 
     public SelenideElement getRecommendedCartButton() {
         return recommendedCartButton;
+    }
+
+    public SelenideElement getRecommendedSidebarAside() {
+        return recommendedSidebarAside;
+    }
+
+    public SelenideElement getYourCityPopUpWindow() {
+        return yourCityPopUpWindow;
+    }
+
+    public SelenideElement getYesCityButton() {
+        return yesCityButton;
     }
 }

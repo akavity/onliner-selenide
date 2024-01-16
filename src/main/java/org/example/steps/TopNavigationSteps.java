@@ -34,12 +34,6 @@ public class TopNavigationSteps {
         topNavigation.getDropDownItem(dataId, asideItemName, dropDownItemName).click();
     }
 
-    @Step("Click log in button")
-    public void clickLogInButton() {
-        topNavigation.getLogInButton().click();
-        log.info("Click the log in button");
-    }
-
     public String getDataId(String classifierItemName) {
         String id = "";
         switch (classifierItemName) {

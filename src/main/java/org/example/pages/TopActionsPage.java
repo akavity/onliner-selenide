@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class TopActionsPage {
     private final SelenideElement fastSearchField = $(By.xpath("//input[contains(@class, 'fast-search')]"));
-    private final SelenideElement authButton = $(By.xpath("//div[contains(text(), 'Вход')]")); // remove logInButton in TopNavigation
+    private final SelenideElement authButton = $(By.xpath("//div[contains(text(), 'Вход')]"));
     private final SelenideElement cartButton = $(By.xpath("//a[@title='Корзина']/.."));
 
     // fast search modal

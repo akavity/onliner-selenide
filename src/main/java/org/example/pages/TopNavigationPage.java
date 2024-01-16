@@ -6,8 +6,6 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class TopNavigationPage {
-    private final SelenideElement logInButton = $(By.xpath("//div[contains(text(), 'Вход')]"));
-
     public SelenideElement getTopMenuItem(String topMenuItemName) {
         return $(By.xpath("//div[@class='b-top-menu']//span[contains(text(), '" + topMenuItemName + "')]"));
     }
@@ -24,9 +22,5 @@ public class TopNavigationPage {
     public SelenideElement getDropDownItem(String dataId, String asideItemName, String dropDownItemName) {
         return $(By.xpath("//div[@data-id='" + dataId + "']//div[contains(text()," +
                 " '" + asideItemName + "')]//..//span[contains(text(), '" + dropDownItemName + "')]/ancestor::a"));
-    }
-
-    public SelenideElement getLogInButton() {
-        return logInButton;
     }
 }

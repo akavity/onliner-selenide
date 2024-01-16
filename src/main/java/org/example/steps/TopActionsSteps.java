@@ -24,4 +24,9 @@ public class TopActionsSteps {
         log.info("Click first product");
         topActionsPage.getProductTitleFields().first().click();
     }
+
+    public void clickAuthButton() {
+        log.info("Click authorization button");
+        topActionsPage.getAuthButton().click();
+    }
 }

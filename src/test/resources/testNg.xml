@@ -23,6 +23,11 @@
                     <include name="lookForAccommodation"/>
                 </methods>
             </class>
+            <class name="org.example.FastSearchTest">
+                <methods>
+                    <include name="addProductToCart"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

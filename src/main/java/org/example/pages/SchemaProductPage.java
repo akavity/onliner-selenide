@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class SchemaProductPage {
-    ElementsCollection products = $$(By.xpath("//div[@id='schema-products']"));
+    private final ElementsCollection products = $$(By.xpath("//div[@id='schema-products']"));
     private final ElementsCollection pricesOfProductsFields = $$(By.xpath("//span[contains(@data-bind,'.minPrice')]"));
     private final ElementsCollection productsNamesFields = $$(By.xpath("//div[contains(@class, 'product__title')]//span"));
     private final SelenideElement offersDescriptionPriceField = $(By.xpath("//div[contains(@class, 'price-group')]/div"));
@@ -16,6 +16,10 @@ public class SchemaProductPage {
 
     public SelenideElement getTypeFilterItem(String filter) {
         return $(By.xpath("//div[@id='schema-order']//span[contains(text(), '" + filter + "')]"));
+    }
+
+    public ElementsCollection getProducts() {
+        return products;
     }
 
     public ElementsCollection getPricesOfProductsFields() {

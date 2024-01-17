@@ -4,20 +4,20 @@ import org.example.annotations.TestData;
 import org.example.models.AuthData;
 import org.example.models.RegData;
 import org.example.steps.AuthContainerSteps;
-import org.example.steps.TopNavigationSteps;
+import org.example.steps.TopActionsSteps;
 import org.example.utils.JsonReaderGson;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LogInTest extends BaseTest {
-    TopNavigationSteps navigationSteps = new TopNavigationSteps();
     AuthContainerSteps authContainerSteps = new AuthContainerSteps();
+    TopActionsSteps topActionsSteps = new TopActionsSteps();
 
     @TestData(jsonFile = "authData", model = "AuthData")
     @Test(description = "Enter incorrect nick or password",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void enterIncorrectNickOrPassword(AuthData authData) {
-        navigationSteps.clickLogInButton();
+        topActionsSteps.clickAuthButton();
         authContainerSteps.enterNick(authData.getNick());
         authContainerSteps.enterPassword(authData.getPassword());
         authContainerSteps.clickAuthButton();
@@ -29,7 +29,7 @@ public class LogInTest extends BaseTest {
     @Test(description = "Get registration error",
             dataProviderClass = JsonReaderGson.class, dataProvider = "getData")
     public void getRegistrationError(RegData regData) {
-        navigationSteps.clickLogInButton();
+        topActionsSteps.clickAuthButton();
         authContainerSteps.clickRegField();
         authContainerSteps.enterNick(regData.getNick());
         authContainerSteps.enterRegPassword(regData.getPassword());

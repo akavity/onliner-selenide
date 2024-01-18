@@ -11,6 +11,7 @@
 * Test 7. Enter an incorrect nickname or password when logging in.
 * Test 8. Enter an incorrect data when registering.
 * Test 9. Check the filtering result when searching for an apartment.
+* Test 10. Find the product in the search and add to cart.
 
 ## Technologies:
 

@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.actions;
 
 @Log4j2
 public class SchemaFilterSteps {
+    String PARAMETER = "{behavior: \"instant\", block: \"center\", inline: \"center\"}";
     SchemaFilterPage schemaFilterPage = new SchemaFilterPage();
     Utils utils = new Utils();
 
@@ -24,7 +25,7 @@ public class SchemaFilterSteps {
     public void clickCheckboxItem(String label, String checkBoxItemName) {
         log.info("click checkBox Item: " + checkBoxItemName);
         SelenideElement element = schemaFilterPage.getCheckboxItem(label, checkBoxItemName);
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         actions().click(element).perform();
     }
 
@@ -32,7 +33,7 @@ public class SchemaFilterSteps {
     public void enterMinValueOfLimit(String label, String minValue) {
         log.info("enter Min value of " + label + ": " + minValue);
         SelenideElement element = schemaFilterPage.getMinValueField(label);
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         actions().click(element).sendKeys(minValue).perform();
     }
 
@@ -40,7 +41,7 @@ public class SchemaFilterSteps {
     public void enterMaxValueOfLimit(String label, String maxValue) {
         log.info("enter Max value of " + label + ": " + maxValue);
         SelenideElement element = schemaFilterPage.getMaxValueField(label);
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         actions().click(element).sendKeys(maxValue).perform();
     }
 
@@ -48,7 +49,7 @@ public class SchemaFilterSteps {
     public void chooseYesNoButton(String label, String decision) {
         log.info("In section " + label + " chose button: " + decision);
         SelenideElement element = schemaFilterPage.getYesNoButton(label, decision);
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         actions().click(element).perform();
     }
 
@@ -56,23 +57,26 @@ public class SchemaFilterSteps {
     public void setMinLimitSelector(String label, String minValue) {
         log.info("set a minimum value of limit for " + label + ": " + minValue);
         SelenideElement element = schemaFilterPage.getMinLimitSelector(label);
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         element.selectOption(minValue);
+        utils.sleep(1000);
+
     }
 
     @Step
     public void setMaxLimitSelector(String label, String maxValue) {
         log.info("set a maximum value of limit for " + label + ": " + maxValue);
         SelenideElement element = schemaFilterPage.getMaxLimitSelector(label);
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         element.selectOption(maxValue);
+        utils.sleep(1000);
     }
 
     @Step
     public void clickControlMoreButton(String label) {
         log.info("Click control more button: " + label);
         SelenideElement element = schemaFilterPage.getControlMoreButton(label);
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         element.click();
     }
 
@@ -80,7 +84,7 @@ public class SchemaFilterSteps {
     public void clickPopoverColumnItem(String label, String itemName) {
         log.info("Click item: " + itemName);
         SelenideElement element = schemaFilterPage.getPopoverColumnItem(label, itemName);
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         element.click();
     }
 
@@ -88,7 +92,7 @@ public class SchemaFilterSteps {
     public void clickAdditionalParamButton() {
         log.info("Click Button and get more parameters");
         SelenideElement element = schemaFilterPage.getAdditionalParametersButton();
-        element.scrollTo();
+        element.scrollIntoView(PARAMETER);
         element.click();
     }
 

@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.example.pages.SchemaProductPage;
 import org.example.utils.Utils;
+import org.openqa.selenium.Keys;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -13,15 +14,17 @@ import java.util.List;
 
 @Log4j2
 public class SchemaProductSteps {
+    String PARAMETER = "{behavior: \"instant\", block: \"center\", inline: \"center\"}";
     SchemaProductPage schemaProductPage = new SchemaProductPage();
     Utils utils = new Utils();
 
     @Step
     public void sortingByOrderFilterButton(String filter) {
-        schemaProductPage.getOrderFilterButton().scrollTo();
-        schemaProductPage.getOrderFilterButton().click();
+        SelenideElement element = schemaProductPage.getOrderFilterButton();
+        element.scrollIntoView(true);
+        element.sendKeys(filter);
+        element.sendKeys(Keys.RETURN);
         log.info("click orderFilterButton");
-        schemaProductPage.getTypeFilterItem(filter).click();
         log.info("select a filter for sorting: " + filter);
     }
 
@@ -46,7 +49,7 @@ public class SchemaProductSteps {
         utils.sleep(3000);
         log.info("Find the cheapest product on the page");
         SelenideElement cash = findTheCheapestProductOnThePage(schemaProductPage.getPricesOfProductsFields());
-        cash.scrollTo();
+        cash.scrollIntoView(PARAMETER);
         cash.click();
         log.info("Click the cheapest product on the page");
     }
@@ -56,7 +59,7 @@ public class SchemaProductSteps {
         utils.sleep(3000);
         log.info("Find the cheapest product on the page by Stream");
         SelenideElement cash = findTheCheapestProductOnThePageByStream(schemaProductPage.getPricesOfProductsFields());
-        cash.scrollTo();
+        cash.scrollIntoView(PARAMETER);
         cash.click();
         log.info("Click the cheapest product on the page by Stream");
     }

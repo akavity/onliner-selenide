@@ -1,6 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Test">
-    <test name="Test" parallel="false">
+<suite name="Test" parallel="tests" thread-count="2">
+
+    <test name="Basic">
+        <parameter name="startType" value="selenoid"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="latest"/>
         <classes>
             <class name="org.example.MainTest">
                 <methods>
@@ -12,6 +16,14 @@
                     <include name="sortingTabletsBySchemaFilterAndOrderFilterButton"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+
+    <test name="Other">
+        <parameter name="startType" value="selenoid"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="latest"/>
+        <classes>
             <class name="org.example.LogInTest">
                 <methods>
                     <include name="enterIncorrectNickOrPassword"/>
@@ -30,4 +42,5 @@
             </class>
         </classes>
     </test>
+
 </suite>

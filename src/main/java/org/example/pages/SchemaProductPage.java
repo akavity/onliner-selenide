@@ -9,14 +9,10 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class SchemaProductPage {
     private final ElementsCollection products = $$(By.xpath("//div[@id='schema-products']"));
-    private final ElementsCollection pricesOfProductsFields = $$(By.xpath("//span[contains(@data-bind,'.minPrice')]"));
-    private final ElementsCollection productsNamesFields = $$(By.xpath("//div[contains(@class, 'product__title')]//span"));
+    private final ElementsCollection pricesOfProductsFields = $$(By.xpath("//a[contains(@href,'prices')]/span[not(@class)]"));
+    private final ElementsCollection productsNamesFields = $$(By.xpath("//div[contains(@class,'data')]//a[contains(@class,'primary')]"));
     private final SelenideElement offersDescriptionPriceField = $(By.xpath("//div[contains(@class, 'price-group')]/div"));
-    private final SelenideElement orderFilterButton = $(By.xpath("//div[@id='schema-order']/a"));
-
-    public SelenideElement getTypeFilterItem(String filter) {
-        return $(By.xpath("//div[@id='schema-order']//span[contains(text(), '" + filter + "')]"));
-    }
+    private final SelenideElement orderFilterButton = $(By.xpath("//div[contains(@class,'sorting')]//select[contains(@class,'real')]"));
 
     public ElementsCollection getProducts() {
         return products;

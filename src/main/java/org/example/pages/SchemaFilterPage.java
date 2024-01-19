@@ -11,43 +11,44 @@ public class SchemaFilterPage {
     private final SelenideElement additionalParametersButton = $(By.xpath("//div[contains(@class, 'addi')]/div/a"));
 
     public SelenideElement getCheckboxItem(String label, String checkBoxItemName) {
-        return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//li//span[contains (text(), '" + checkBoxItemName + "')]"));
+        return $(By.xpath("//div[contains(text(),'" + label + "')]/ancestor::div[contains(@class,'specific')]" +
+                "/following-sibling::div/div/ul//div[contains(@class,'sign') and contains(text(),'" + checkBoxItemName + "')]"));
     }
 
     public SelenideElement getControlMoreButton(String label) {
-        return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../..//div[contains(@class,'control schema')]"));
+        return $(By.xpath("//div[contains(text(),'" + label + "')]/ancestor::div[contains(@class,'specific')]" +
+                "/following-sibling::div/div/div"));
     }
 
     public SelenideElement getPopoverColumnItem(String label, String itemName) {
-        return $(By.xpath("//div[contains(text(), '" + label + "')]" +
-                "/following-sibling::div//span[contains(text(), '" + itemName + "')]"));
+        return $(By.xpath("//div[contains(text(),'" + label + "')]/ancestor::div[contains(@class,'specific')]" +
+                "/following-sibling::div//div[contains(@class,'container')]" +
+                "//div[contains(@class,'checkbox-sign') and text()='" + itemName + "']"));
     }
 
     public SelenideElement getMinValueField(String label) {
-        return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//div[contains(@class, 'control')][1]"));
+        return $(By.xpath("//div[contains(text(),'" + label + "')]/ancestor::div[contains(@class,'specific')]" +
+                "/following-sibling::div//input[@placeholder='от']"));
     }
 
     public SelenideElement getMaxValueField(String label) {
-        return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//div[contains(@class, 'control')][2]"));
+        return $(By.xpath("//div[contains(text(),'" + label + "')]/ancestor::div[contains(@class,'specific')]" +
+                "/following-sibling::div//input[@placeholder='до']"));
     }
 
     public SelenideElement getYesNoButton(String label, String decision) {
-        return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//span[contains(text(), '" + decision + "')]"));
+        return $(By.xpath("//div[contains(text(),'" + label + "')]/ancestor::div[contains(@class,'label_base')]" +
+                "/following-sibling::div//span[contains(text(),'" + decision + "')]/.."));
     }
 
     public SelenideElement getMinLimitSelector(String label) {
-        return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//div[contains(@class, 'cont')][1]/select"));
+        return $(By.xpath("//div[contains(text(),'" + label + "')]/ancestor::div[contains(@class,'label_base')]" +
+                "/following-sibling::div//div[contains(@class,'input-wrapper')][1]//select"));
     }
 
     public SelenideElement getMaxLimitSelector(String label) {
-        return $(By.xpath("//span[contains(text(), '" + label + "')]" +
-                "/../following-sibling::div//div[contains(@class, 'cont')][2]/select"));
+        return $(By.xpath("//div[contains(text(),'" + label + "')]/ancestor::div[contains(@class,'label_base')]" +
+                "/following-sibling::div//div[contains(@class,'input-wrapper')][2]//select"));
     }
 
     public SelenideElement getFilterButton() {

@@ -12,7 +12,7 @@
     "labelShop": "Магазин",
     "shopName": "ТТН",
     "filter": "Дешевые",
-    "pieceOfName": "Galaxy A04e"
+    "pieceOfName": "Galaxy A04"
   },
   {
     "topMenuItemName": "Каталог",
@@ -42,7 +42,7 @@
     "labelShop": "Магазин",
     "shopName": "ТехноМир",
     "filter": "Популярные",
-    "pieceOfName": "13C"
+    "pieceOfName": "Note 12"
   },
   {
     "topMenuItemName": "Каталог",
@@ -72,7 +72,7 @@
     "labelShop": "Магазин",
     "shopName": "Agroup",
     "filter": "Дешевые",
-    "pieceOfName": "X5 Plus"
+    "pieceOfName": "HONOR X6"
   },
   {
     "topMenuItemName": "Каталог",
@@ -87,7 +87,7 @@
     "labelShop": "Магазин",
     "shopName": "ТехноМир",
     "filter": "Популярные",
-    "pieceOfName": "Note 30 Pro"
+    "pieceOfName": "Note 30i"
   },
   {
     "topMenuItemName": "Каталог",
@@ -102,6 +102,6 @@
     "labelShop": "Магазин",
     "shopName": "JUST-MOBILE",
     "filter": "Дешевые",
-    "pieceOfName": "Narzo 50A"
+    "pieceOfName": "Realme C55"
   }
 ]

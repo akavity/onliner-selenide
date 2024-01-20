@@ -10,10 +10,10 @@
     "minPrice": "300",
     "maxPrice": "720",
     "labelShop": "Магазин",
-    "shopName": "Мобилайн",
+    "shopName": "JUST-MOBILE",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2022",
-    "pieceOfName": "SM-A047F/DS"
+    "pieceOfName": "Galaxy A04e"
   },
   {
     "topMenuItemName": "Каталог",
@@ -93,7 +93,7 @@
     "shopName": "ТехноМир",
     "labelDate": "Дата выхода на рынок",
     "releaseDate": "2023",
-    "pieceOfName": "X669D"
+    "pieceOfName": "Smart 7"
   },
   {
     "topMenuItemName": "Каталог",
